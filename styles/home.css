@@ -1,0 +1,198 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* ----------------------------------NAVBAR----------------------------------- */
+.container-navbar {
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
+    background-color: #00b300;
+    color: #fff;
+    border-radius: 0 0 10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index: 1;
+}
+
+.navbar {
+    font-size: 24px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.navbar ul {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.navbar ul li {
+    margin: 1vw;
+    list-style-type: none;
+    display: inline-block;
+}
+
+#login {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-link:after {
+    display:block;
+    content: '';
+    border-bottom: solid 3px #fff;  
+    transform: scaleX(0);  
+    transition: transform 150ms ease-in-out;
+}
+
+.nav-link:hover:after { 
+    transform: scaleX(1); 
+}
+
+/* ----------------------------------NAVBAR-END----------------------------------- */
+
+.crossfade {
+    height: 100vh;
+    width: 100%;
+}
+
+.crossfade-cover {
+    height: 100vh;
+    width: 100%;
+}
+
+.crossfade > figure {
+    position: absolute;
+    color: transparent;
+    animation: imageAnimation 30s linear infinite 0s;
+    backface-visibility: hidden;
+    background-size: cover;
+    background-position: fixed;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    z-index: -1;
+  }
+
+.crossfade > figure:nth-child(1) { 
+    background-image: url("../pictures/hands.jpg"); 
+}
+
+.crossfade > figure:nth-child(2) {
+    animation-delay: 6s;
+    background-image: url("../pictures/planting.jpg");
+}
+
+.crossfade > figure:nth-child(3) {
+    animation-delay: 12s;
+    background-image: url("../pictures/teaching.jpg");
+}
+
+.crossfade > figure:nth-child(4) {
+    animation-delay: 18s;
+    background-image: url("../pictures/woman-hammering.jpg");
+}
+  
+.crossfade > figure:nth-child(5) {
+    animation-delay: 24s;
+    background-image: url("../pictures/volunteer.jpg");
+}
+
+@keyframes imageAnimation {  
+    0% {
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+    8% {
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
+    17% {
+        opacity: 1
+    }
+    25% {
+        opacity: 0
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+.crossfade-cover {
+    background: rgba(255,255,255,0.66);
+}
+
+.logo {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #00b300;
+}
+
+.logo h1{
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 3em;
+    color: #00b300;
+}
+
+.logo img {
+    width: 300px;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 15%;
+    font-size: 16px;
+    margin: 0 auto;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#about {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    color: #00b300;
+    place-items: center;
+    font-size: 24px;
+}
+
+#about #about-info{
+    grid-row: 2;
+    grid-column: 2;
+}
+
+#footer {
+    height: 25vh;
+    background: #00b300;
+}
