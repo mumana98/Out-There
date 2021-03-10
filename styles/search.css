@@ -109,4 +109,8 @@ form.searchBar::after {
     display: table;
 }
 
-  
+#footer {
+    height: 25vh;
+    background: #00b300;
+    width: 100%;
+}
