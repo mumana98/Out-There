@@ -47,6 +47,14 @@ html {
     transform: translateY(-50%);
 }
 
+#nav-logo{
+    position: absolute;
+    height: 120%;
+    left: 30px;
+    top: -10px;
+    z-index: 1;
+}
+
 .nav-link {
     text-decoration: none;
     color: #fff;
