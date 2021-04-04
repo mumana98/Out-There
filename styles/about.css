@@ -1,0 +1,68 @@
+#container{
+	width: 90%;
+	margin: 10px auto;
+	height:100%;
+	text-align:center;
+	/* float:center; */
+	font-family:arial;
+	color:#00b300;
+	font-size:20px;
+}
+#header{
+	width:90%;
+	height: 100px;
+
+}
+#footer{
+	width:100%;
+	background-color: #00b300;
+	height: 32vh;
+}
+
+#footertext{
+	font-family: arial;
+	background-color: #00b300;
+	height: 100%;
+	color: white;
+}
+
+#footer-logo{
+    float: right;
+    padding-right: 20px;
+    height: 150px;
+    width: 150px;
+    z-index: 1;
+}
+
+.center {
+    text-align: center;
+    clear: both;
+    margin: 0;
+}
+
+#t1{
+	/* float:center; */
+	width:20%;
+	font-size:18px;
+	font-family: arial;
+	margin: 10px auto;
+}
+
+.td1{
+	float:right;
+	font-family:arial;
+}
+
+#comments{
+	height: 40%;
+	width: 60%;
+}
+
+.floatleft{
+float: left;
+width: 426px;
+margin: 0 0 10px 10px;
+background-color: #fff;
+padding: 10px;
+
+}
