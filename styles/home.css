@@ -205,7 +205,7 @@ html {
 }
 
 #footer {
-    height: 25vh;
+    height: 32vh;
     background: #00b300;
 }
 
@@ -217,9 +217,18 @@ html {
     text-decoration: none;
     color: #fff;
     margin: 10px;
+}
 
+#footer-logo{
+    float: right;
+    padding-right: 20px;
+    height: 150px;
+    width: 150px;
+    z-index: 1;
 }
 
 .center {
     text-align: center;
+    clear: both;
+    margin: 0;
 }

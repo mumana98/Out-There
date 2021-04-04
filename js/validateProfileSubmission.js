@@ -6,7 +6,7 @@ form_el.addEventListener("submit", function(evt) {
 })
 
 function validate(){
-    var username = document.getElementById('name').value
+    var username = document.getElementById('un').value
     var pw = document.getElementById('pw').value
     var rpw = document.getElementById('rpw').value
 

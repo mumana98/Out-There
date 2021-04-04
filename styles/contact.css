@@ -16,7 +16,7 @@
 #footer{
 	width:100%;
 	background-color: #00b300;
-	height: 25vh;
+	height: 32vh;
 }
 
 #footertext{
@@ -24,6 +24,20 @@
 	background-color: #00b300;
 	height: 100%;
 	color: white;
+}
+
+#footer-logo{
+    float: right;
+    padding-right: 20px;
+    height: 150px;
+    width: 150px;
+    z-index: 1;
+}
+
+.center {
+    text-align: center;
+    clear: both;
+    margin: 0;
 }
 
 #t1{
