@@ -161,6 +161,7 @@ html {
     transform: translate(-50%, 0);
     font-size: 3em;
     color: #00b300;
+    text-shadow: 0px 0px 6px rgba(255,255,255,0.7);
 }
 
 .logo img {
@@ -169,7 +170,7 @@ html {
 
 .button {
     background-color: #4CAF50;
-    border: none;
+    border: 2px solid #4CAF50;
     color: white;
     padding: 15px 32px;
     text-align: center;
@@ -180,6 +181,12 @@ html {
     margin: 0 auto;
     cursor: pointer;
     border-radius: 10px;
+}
+
+.button:hover {
+    border: 2px solid #4CAF50;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #4CAF50;
 }
 
 #about {
@@ -200,4 +207,19 @@ html {
 #footer {
     height: 25vh;
     background: #00b300;
+}
+
+#footertext {
+    padding: 20px;
+}
+
+#footertext a, #footertext p{
+    text-decoration: none;
+    color: #fff;
+    margin: 10px;
+
+}
+
+.center {
+    text-align: center;
 }

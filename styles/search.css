@@ -67,6 +67,14 @@ body {
     transform: scaleX(1); 
 }
 
+#nav-logo{
+    position: absolute;
+    height: 120%;
+    left: 30px;
+    top: -10px;
+    z-index: 1;
+}
+
 /* ----------------------------------NAVBAR-END----------------------------------- */
 
 .searchBar {
@@ -113,4 +121,19 @@ form.searchBar::after {
     height: 25vh;
     background: #00b300;
     width: 100%;
+}
+
+#footertext {
+    padding: 20px;
+}
+
+#footertext a, #footertext p{
+    text-decoration: none;
+    color: #fff;
+    margin: 10px;
+
+}
+
+.center {
+    text-align: center;
 }
