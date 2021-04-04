@@ -1,60 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Register Your Profile</title>
-        <link rel="icon" href="../pictures/favicon.ico">
-        <meta name="description" content="A page that allows users to leave their e-mail address, name, location and preferred work type, so that they can get e-mail subscriptions">
-        <meta name="author" content="Out There Team">
-        <link rel="stylesheet" href="../styles/search.css"> 
-    </head>
 
-    <body>
+<head>
+    <meta charset="utf-8" />
+    <title>Register Your Profile</title>
+    <link rel="icon" href="../pictures/favicon.ico" />
+    <meta name="description"
+        content="A page that allows users to leave their e-mail address, name, location and preferred work type, so that they can get e-mail subscriptions" />
+    <meta name="author" content="Out There Team" />
+    <link rel="stylesheet" href="../styles/search.css" />
+</head>
 
-    <nav class="container-navbar">  
-            <div class="navbar">
-                <a href="../index.html"><img id="nav-logo" src="../pictures/white_out-there_img.png" alt="logo image"></a>
-                <ul>
-                    <li><a class="nav-link" href="../index.html">Home</a></li>
-                    <li><a class="nav-link" href="./search.html">Search</a></li>
-                    <li><a class="nav-link" href="./about.html">About</a></li>
-                    <li><a class="nav-link" href="./contact.html">Contact Us</a></li>
-                </ul>
+<body>
+    <nav class="container-navbar">
+        <div class="navbar">
+            <a href="../index.html"><img id="nav-logo" src="../pictures/white_out-there_img.png" alt="logo image" /></a>
+            <ul>
+                <li><a class="nav-link" href="../index.html">Home</a></li>
+                <li><a class="nav-link" href="./search.html">Search</a></li>
+                <li><a class="nav-link" href="./about.html">About</a></li>
+                <li><a class="nav-link" href="./contact.html">Contact Us</a></li>
+            </ul>
 
-                <!-- <a id="Login" class="nav-link" href="./profile.html">Login</a> -->
+            <!-- <a id="Login" class="nav-link" href="./profile.html">Login</a> -->
+        </div>
+    </nav>
+
+    <div style="position: fixed; top: 110px">
+        <form class="body" id="form">
+            <h1 style="text-align: center">Register</h1>
+            <h1 style="text-align: center">
+                Register your profile here in order to receive e-mail newsletters and
+                work recommendations that suits your preferences from us!
+            </h1>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname"><br>
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email"><br>
+            <label for="pw">Password:</label><br>
+            <input type="text" id="pw" name="pw"><br>
+            <label for="un">Username:</label><br>
+            <input type="text" id="un" name="un"><br>
+            <label for="state">State:</label><br>
+            <input type="text" id="state" name="state"><br>
+            <label for="city">City:</label><br>
+            <input type="text" id="city" name="city"><br>
+            <table>
+                <tr>
+                    <td><input type="submit" name="Submit" /></td>
+                </tr>
+            </table>
+        </form>
+        <div id="footer">
+            <div id="footertext">
+                <p>
+                    <a href="./about.html">About</a>
+                </p>
+                <p>
+                    <a href="./search.html">Search</a>
+                </p>
+                <p>
+                    <a href="./contact.html">Contact Us</a>
+                </p>
+                <p class="center">
+                    <a href="mailto:msu245@utexas.edu">&#169; Out There 03/10/2021</a>
+                </p>
             </div>
-		</nav>
-
-
-  <div style = "position:fixed; top:110px;">
-	<form class="body">
-		<h1 style="text-align:center">Register</h1>
-	  	<h1 style="text-align:center">Register your profile here in order to receive e-mail newsletters and work recommendations that suits your preferences from us!</h1>
-      	<p><label>Name:<input type="text" name="Name" placeholder="Enter your name here"></label></p>
-       	<p><label>E-mail:<input type="text" name="e-mail" placeholder="Enter your e-mail here"></label></p>
-       	<p><label>State:<input type="text" name="State" placeholder="Enter your state here"></label></p>
-       	<p><label>City:<input type="text" name="City" placeholder="Enter your city here"></label></p>
-       	<p><label>Preferences:<input type="text" name="Preferences" placeholder="Enter your preferences"></label></p>
-        <table>
-            <tr>
-                <td><input type="submit" name="Submit"></td>
-            </tr>
-        </table>
-   	</form>
-    <div id="footer">
-        <div id= "footertext">
-            <p>
-            <a href="./about.html">About</a>
-            </p>
-            <p>
-            <a href="./search.html">Search</a>
-            </p>
-            <p>
-            <a href="./contact.html">Contact Us</a>
-            </p>
-            <p class="center"><a href="mailto:msu245@utexas.edu">&#169; Out There 03/10/2021</a></p>    
-        </div>  
+        </div>
     </div>
-  </div>
-	</body>
+    <script src="../js/validateProfileSubmission.js"></script>
+</body>
+
 </html>
