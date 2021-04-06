@@ -83,6 +83,7 @@
 }
 
 #submit{
+    align-items: center
     float: left;
     width: 10%;
     padding: 10px;
@@ -90,12 +91,12 @@
     color: white;
     font-size: 17px;
     border: 1px solid grey;
-    border-left: none;
     border-radius: 0 10px 10px 0;
     cursor: pointer;
 }
 
 #reset{
+    align-items: center
     float: left;
     width: 10%;
     padding: 10px;
@@ -103,7 +104,6 @@
     color: white;
     font-size: 17px;
     border: 1px solid grey;
-    border-left: none;
     border-radius: 0 10px 10px 0;
     cursor: pointer;
 }
