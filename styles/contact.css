@@ -42,7 +42,7 @@
 
 #t1{
 	/* float:center; */
-	width:60%;
+	width:40%;
 	font-size:18px;
 	font-family: arial;
 	margin: 10px auto;
@@ -72,7 +72,6 @@
 #t2{
 	text-align: center;
 	border-spacing: 50px 10px;
-	width: 80%
 }
 
 #studentAddress{
