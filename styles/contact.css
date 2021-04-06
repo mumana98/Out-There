@@ -51,7 +51,7 @@
 .td1{
 	float:right;
 	font-family:arial;
-	width: 50%
+	width: 100%
 }
 
 #comments{
@@ -69,5 +69,6 @@
 }
 
 #t2{
+	text-align: center;
 	border-spacing: 50px 10px;
 }
