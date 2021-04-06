@@ -69,8 +69,18 @@ body {
 
 /* ----------------------------------BODY----------------------------------- */
 .container-body{
-    font-color:#00b300;
+    color:#00b300;
     text-align: center;
     width:90%;
     font-family:arial;
+}
+
+.form-body {
+    width: inherit;
+    margin: auto;
+    padding: auto;
+}
+
+.form-body label {
+    font-size: 24px;
 }
