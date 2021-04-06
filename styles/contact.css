@@ -81,3 +81,29 @@
 #subject{
 	width:100%;
 }
+
+#submit{
+    float: left;
+    width: 10%;
+    padding: 10px;
+    background: #00b300;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+}
+
+#reset{
+    float: left;
+    width: 10%;
+    padding: 10px;
+    background: #00b300;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+}
