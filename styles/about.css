@@ -15,8 +15,10 @@
 }
 
 #about_list{
+	text-align: center;
 	width: 40%;
-	padding: 10px;
+	margin: auto;
+	padding-bottom: 50px;
 }
 
 #header{
