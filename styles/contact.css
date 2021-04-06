@@ -42,7 +42,7 @@
 
 #t1{
 	/* float:center; */
-	width:20%;
+	width:80%;
 	font-size:18px;
 	font-family: arial;
 	margin: 10px auto;
@@ -55,7 +55,7 @@
 
 #comments{
 	height: 40%;
-	width: 60%;
+	width: 80%;
 }
 
 #info{
@@ -64,7 +64,7 @@
 }
 
 #bio{
-	font-size:12px;
+	font-size:14px;
 }
 
 #t2{
