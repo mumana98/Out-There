@@ -85,6 +85,9 @@ body {
     font-size: 24px;
 }
 
+#formbuttons
+    text-align: center;
+
 #submit{
     align-items: center;
     float: center;
