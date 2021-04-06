@@ -84,7 +84,7 @@
 
 #submit{
     align-items: center;
-    float: left;
+    float: center;
     width: 10%;
     padding: 10px;
     background: #00b300;
@@ -97,7 +97,7 @@
 
 #reset{
     align-items: center;
-    float: left;
+    float: center;
     width: 10%;
     padding: 10px;
     background: #00b300;
