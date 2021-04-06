@@ -57,6 +57,7 @@
 #comments{
 	height: 40%;
 	width: 80%;
+	text-align: left
 }
 
 #info{
@@ -71,4 +72,8 @@
 #t2{
 	text-align: center;
 	border-spacing: 50px 10px;
+}
+
+#studentAddress{
+	width: 80%;
 }
