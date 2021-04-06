@@ -1,3 +1,14 @@
+#title{
+	width: 90%;
+	margin: 10px auto;
+	height:100%;
+	text-align:center;
+	/* float:center; */
+	font-family:arial;
+	color:#00b300;
+	font-size:38px;
+}
+
 #container{
 	width: 90%;
 	margin: 10px auto;
@@ -8,7 +19,4 @@
 	color:#00b300;
 	font-size:20px;
 
-}
-#login{
-	font-size:38px
 }
