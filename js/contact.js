@@ -1,5 +1,4 @@
 function appendText() {
   event.preventDefault();
-  var txt1 = $("<i></i>").text("love ");
-  window.alert(txt1);
+  window.alert("Thanks for reaching out! An OutThere team member will get back to you shortly.);
 }
