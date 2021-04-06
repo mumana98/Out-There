@@ -83,7 +83,7 @@
 }
 
 #submit{
-    align-items: center
+    align-items: center;
     float: left;
     width: 10%;
     padding: 10px;
@@ -96,7 +96,7 @@
 }
 
 #reset{
-    align-items: center
+    align-items: center;
     float: left;
     width: 10%;
     padding: 10px;
