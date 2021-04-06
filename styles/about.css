@@ -8,6 +8,17 @@
 	color:#00b300;
 	font-size:20px;
 }
+
+ 
+#text{
+	padding:60px;
+}
+
+#about_list{
+	width: 40%;
+	padding: 10px;
+}
+
 #header{
 	width:90%;
 	height: 100px;

@@ -193,7 +193,7 @@ html {
     display: grid;
     grid-template-columns: 200px 1fr 200px;
     grid-template-rows: auto 1fr auto;
-    height: 100vh;
+    height: 0vh;
     color: #00b300;
     place-items: center;
     font-size: 24px;
