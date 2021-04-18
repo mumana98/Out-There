@@ -67,6 +67,7 @@
 
 #bio{
 	font-size:14px;
+	color:#00b300;
 }
 
 #t2{
@@ -110,4 +111,24 @@
 
 #formbuttons{
 	text-align:center;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 200px;
+  margin: 15px;
+  text-align: center;
+  font-family: arial;
+  border-radius: 5px 5px 0 0;
+  display: inline-table;
+  padding: 5px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.title {
+  color: grey;
+  font-size: 16px;
 }
