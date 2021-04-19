@@ -8,6 +8,9 @@ body {
     padding: 0;
 }
 
+a{
+    color:#00b300;
+}
 /* ----------------------------------NAVBAR----------------------------------- */
 .container-navbar {
     position: fixed;
@@ -122,6 +125,14 @@ form.searchBar::after {
     background: #00b300;
     width: 100%;
 }
+
+#curr-opp{
+    text-align: center;
+    font-size: 15px;
+    color:#00b300;
+}
+
+
 
 #footertext {
     padding: 20px;
