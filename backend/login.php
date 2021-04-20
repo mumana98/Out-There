@@ -24,6 +24,7 @@
         }
         echo "<p style='color:red'>" . "Incorrect Username or Password" . "</p>";
         setcookie('login_fail', true, time() + 160, '/');
-        header("Location: ../pages/login.html");
+        // header("Location: ../pages/login.html"); 
+        header("Location: ../pages/search.html"); //delete this
     }
 ?>
