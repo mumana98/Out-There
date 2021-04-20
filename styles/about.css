@@ -2,8 +2,6 @@
 	width: 90%;
 	margin: 10px auto;
 	height:100%;
-	text-align:right;
-	/* float:center; */
 	font-family:arial;
 	color:black;
 	font-size:20px;
@@ -11,6 +9,27 @@
 
  
 #text{
+	padding: 60px;
+}
+
+#text1{
+	text-align: left;
+	padding: 100px;
+}
+
+#text2{
+	text-align: right;
+	padding: 100px
+}
+
+#vid1{
+	float: right;
+	padding: 40px;
+}
+
+#vid2{
+	float: left;
+	padding: 40px;
 }
 
 #about_list{
