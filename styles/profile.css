@@ -8,6 +8,10 @@ body {
     padding: 0;
 }
 
+a{
+    color: inherit;
+}
+
 /* ----------------------------------NAVBAR----------------------------------- */
 .container-navbar {
     position: fixed;
@@ -92,8 +96,9 @@ body {
   padding:15px;
   margin: 8px 0 22px 0;
   display: inline-block;
-  border: 3px;
   background-color: #f1f1f1;
+  border: 2px solid #4CAF50;
+  border-radius: 10px;
 }
 
 .form-body input[type=password]{
@@ -101,13 +106,16 @@ body {
   padding:15px;
   margin: 8px 0 22px 0;
   display: inline-block;
-  border: 3px;
   background-color: #f1f1f1;
+  border: 2px solid #4CAF50;
+  border-radius: 10px;
 }
 
 .form-body input[type=text]:focus, input[type=password]:focus {
   background-color: #ddd;
   outline: none;
+  border: 2px solid #4CAF50;
+  border-radius: 10px;
 }
 
 .form-body {
@@ -121,6 +129,7 @@ body {
 }
 
 #submit{
+    margin-bottom: 50px;
     align-items: center;
     float: center;
     width: 10%;
