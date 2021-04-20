@@ -34,8 +34,8 @@ h1{
 	text-align: left;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	padding-left: 50px;
-	color: black;
+	padding-left: 40px;
+	color: #00b300;
 	font-size: 18px;
 }
 
@@ -46,7 +46,10 @@ h1{
 
 #vid2{
 	float: right;
-	padding: 40px;
+	padding-top: 0px;
+	padding-bottom: 40px;
+	padding-left: 40px;
+	padding-right: 40px;
 	
 }
 
