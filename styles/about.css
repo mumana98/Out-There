@@ -31,7 +31,9 @@ h1{
 
 #text2{
 	text-align: left;
-	padding: 40px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 40px
 	color: black;
 	font-size: 18px;
 }
@@ -50,7 +52,9 @@ h1{
 	text-align: left;
 	margin: auto;
 	color: black;
-	font-size: 14px;
+	font-size: 18px;
+	padding-left: 40px
+
 }
 
 #header{
