@@ -34,26 +34,39 @@
 				<table id="t1">
 					<tr>
 						<th style="text-align: left">
-							<label>Subject</label>
+							<label>What issue can we help with?</label>
 						</th>
 
 						<td class="td1">
-							<input type="text" id="subject" value="Email subject" />
+							<select name="issues">
+								<option value= "website">Website Function</option>
+								<option value= "idea"> Ideas/Feedback</option>
+								<option value= "account"> Account Issues</option>
+							</select>
 						</td>
 					</tr>
 					<tr>
 						<th style="text-align: left">
-							<label>Email</label>
+							<label>Your Email</label>
 						</th>
 						<td class="td1">
-							<input type="text" id="studentAddress" value="User e-mail" />
+							<input type="text" id="studentAddress" value="" />
+						</td>
+					</tr>
+					<tr>
+						<th style="text-align: left">
+							<label>Subject</label>
+						</th>
+
+						<td class="td1">
+							<input type="text" id="subject" value="" />
 						</td>
 					</tr>
 				</table>
 
 				<!-- text box -->
 				<p>
-					<textarea id="comments" name="comments" rows="30" cols="60" style="font-family: arial">
+					<textarea id="comments" name="comments" rows="20" cols="60" style="font-family: arial">
 						Type any feedback here.
 					</textarea>
 				</p>
