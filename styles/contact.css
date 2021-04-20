@@ -18,6 +18,16 @@
 	color:#00b300;
 	font-size:38px;
 }
+
+h1{
+	width: 90%;
+	margin: 10px auto;
+	height:100%;
+	font-family:arial;
+	color:#00b300;
+	text-align: center;
+}
+
 #header{
 	width:90%;
 	height: 100px;
