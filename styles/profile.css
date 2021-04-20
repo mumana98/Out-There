@@ -128,7 +128,7 @@ body {
     background: #00b300;
     color: white;
     font-size: 17px;
-    border: 1px solid grey;
+    border: 2px solid #4CAF50;
     border-radius: 10px 10px 10px 10px;
     cursor: pointer;
 }

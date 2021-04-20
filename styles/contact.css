@@ -101,22 +101,22 @@
     background: #00b300;
     color: white;
     font-size: 17px;
-    border: 1px solid grey;
+    border: 2px solid #4CAF50;
     border-radius: 10px 10px 10px 10px;
     cursor: pointer;
 }
 
 #reset{
-    align-items: center;
-    float: center;
-    width: 10%;
-    padding: 10px;
-    background: #00b300;
-    color: white;
-    font-size: 17px;
-    border: 1px solid grey;
-    border-radius: 10px 10px 10px 10px;
-    cursor: pointer;
+  align-items: center;
+  float: center;
+  width: 10%;
+  padding: 10px;
+  background: #00b300;
+  color: white;
+  font-size: 17px;
+  border: 2px solid #4CAF50;
+  border-radius: 10px 10px 10px 10px;
+  cursor: pointer;
 }
 
 #formbuttons{
@@ -154,17 +154,17 @@ input[type=text], select {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: 2px solid #4CAF50;
+  border-radius: 10px;
   box-sizing: border-box;
 }
 
 textarea{
-	border-radius: 4px;
+	border-radius: 10px;
 	padding: 12px 20px;
 	box-sizing: border-box;
 	resize: none;
-	border: 1px solid #ccc;
+	border: 2px solid #4CAF50;
 }
 
 h1 {
@@ -173,7 +173,7 @@ h1 {
 }
 
 #submit:hover {
-    border: 1px solid #4CAF50;
-    background-color: rgba(255, 255, 255, 0.5);
-    color: #4CAF50;
+  border: 2px solid #4CAF50;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #4CAF50;
 }
