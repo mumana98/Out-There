@@ -2,16 +2,15 @@
 	width: 90%;
 	margin: 10px auto;
 	height:100%;
-	text-align:center;
+	text-align:right;
 	/* float:center; */
 	font-family:arial;
-	color:#00b300;
+	color:black;
 	font-size:20px;
 }
 
  
 #text{
-	padding:60px;
 }
 
 #about_list{
