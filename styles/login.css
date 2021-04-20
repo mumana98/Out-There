@@ -8,71 +8,72 @@
   height: 100vh;
 }
 
-#title{
-	width: 90%;
-	margin: 10px auto;
-	height:100%;
-	text-align:center;
-	/* float:center; */
-	font-family:arial;
-	color:#00b300;
-	font-size:38px;
+#title {
+  width: 90%;
+  margin: 10px auto;
+  height: 100%;
+  text-align: center;
+  /* float:center; */
+  font-family: arial;
+  color: #00b300;
+  font-size: 38px;
 }
 
-a{
-	color:#00b300;
+a {
+  color: #00b300;
 }
 
-#container{
-	width: 90%;
-	margin: 10px auto;
-	height:100%;
-	text-align:center;
-	/* float:center; */
-	font-family:arial;
-	color:#00b300;
-	font-size:20px;
-
+#container {
+  width: 90%;
+  margin: 10px auto;
+  height: 100%;
+  text-align: center;
+  /* float:center; */
+  font-family: arial;
+  color: #00b300;
+  font-size: 20px;
 }
 
-#form input[type=text]{
+#form input[type="text"] {
   width: 70%;
-  padding:15px;
+  padding: 15px;
   margin: 8px 0 22px 0;
   display: inline-block;
   border: 3px;
   background-color: #f1f1f1;
 }
 
-#form input[type=password]{
+#form input[type="password"] {
   width: 70%;
-  padding:15px;
+  padding: 15px;
   margin: 8px 0 22px 0;
   display: inline-block;
   border: 3px;
   background-color: #f1f1f1;
 }
 
-#form input[type=text]:focus, input[type=password]:focus {
+#form input[type="text"]:focus,
+input[type="password"]:focus {
   background-color: #ddd;
   outline: none;
 }
 
-
-#form input[type=button]{
-    align-items: center;
-    float: center;
-    width: 10%;
-    padding: 10px;
-    background: #00b300;
-    color: white;
-    font-size: 17px;
-    border: 1px solid grey;
-    border-radius: 10px 10px 10px 10px;
-    cursor: pointer;
+#form input[type="button"] {
+  margin-bottom: 50px;
+  align-items: center;
+  float: center;
+  width: 10%;
+  padding: 10px;
+  background: #00b300;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-radius: 10px 10px 10px 10px;
+  cursor: pointer;
 }
 
-#form input[type=button]:hover {
-    border: 2px solid #4CAF50;
-    background-color: rgba(255, 255, 255, 0.5);
-    color: #4CAF50;
+#form input[type="button"]:hover {
+  border: 2px solid #4caf50;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #4caf50;
+}
