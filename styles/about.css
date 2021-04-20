@@ -36,9 +36,12 @@
 }
 
 #about_list{
-	text-align: right;
+	padding: 
+	text-align: left;
 	width: 40%;
 	margin: auto;
+	color: black;
+	padding-left: 75%
 	padding-bottom: 50px;
 }
 
