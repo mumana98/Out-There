@@ -27,117 +27,129 @@
 	</nav>
 	<div id="header"></div>
 	<!-- main part of contact page-->
-	<div id="container">
-		<form>
-			<strong>Contact Us</strong>
-			<div>
-				<table id="t1">
-					<tr>
-						<th style="text-align: left">
-							<label>What issue can we help with?</label>
-						</th>
+	<div id="content">
+		<div id="main-content">
+			<div id="container">
+				<form>
+					<strong>Contact Us</strong>
+					<div>
+						<table id="t1">
+							<tr>
+								<th style="text-align: left">
+									<label>What issue can we help with?</label>
+								</th>
 
-						<td class="td1">
-							<select name="issues">
-								<option value= "website">Website Function</option>
-								<option value= "idea"> Ideas/Feedback</option>
-								<option value= "account"> Account Issues</option>
-							</select>
-						</td>
-					</tr>
-					<tr>
-						<th style="text-align: left">
-							<label>Your Email</label>
-						</th>
-						<td class="td1">
-							<input type="text" id="studentAddress" value="" />
-						</td>
-					</tr>
-					<tr>
-						<th style="text-align: left">
-							<label>Subject</label>
-						</th>
+								<td class="td1">
+									<select name="issues">
+										<option value="website">Website Function</option>
+										<option value="idea"> Ideas/Feedback</option>
+										<option value="account"> Account Issues</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<th style="text-align: left">
+									<label>Your Email</label>
+								</th>
+								<td class="td1">
+									<input type="text" id="studentAddress" value="" />
+								</td>
+							</tr>
+							<tr>
+								<th style="text-align: left">
+									<label>Subject</label>
+								</th>
 
-						<td class="td1">
-							<input type="text" id="subject" value="" />
-						</td>
-					</tr>
-				</table>
+								<td class="td1">
+									<input type="text" id="subject" value="" />
+								</td>
+							</tr>
+						</table>
 
-				<!-- text box -->
-				<p>
-					<textarea id="comments" name="comments" rows="20" cols="60" style="font-family: arial">
-						Type any feedback here.
-					</textarea>
-				</p>
-				<div id="formbuttons">
-				<input type="submit" id="submit" value="Submit" onClick="appendText()"/>
-				<input type="reset" id="submit" value="Reset" />
+						<!-- text box -->
+						<p>
+							<textarea id="comments" name="comments" rows="20" cols="60" style="font-family: arial">
+								Type any feedback here.
+							</textarea>
+						</p>
+						<div id="formbuttons">
+							<input type="submit" id="submit" value="Submit" onClick="appendText()" />
+							<input type="reset" id="submit" value="Reset" />
+						</div>
+					</div>
+				</form>
+				<br>
+				<hr>
+				<strong>Developers</strong>
+
+				<div id="cards">
+					<div class="card">
+						<img src="../pictures/portraits/matthew.png" alt="Picture of Matthew" width="200"
+							height="200" />
+						<h1>Matthew Umana</h1>
+						<p class="title">Out There Developer</p>
+						<p id="bio"> I'm a web developer for Out There. As a current senior at the University of Texas
+							at Austin, my major is Entertainment Technology with a certificate in Elements of Computing.
+						</p>
+						<p></p>
+						<hr>
+						<p id="bio"><a href="msu245@utexas.edu"> msu245@utexas.edu </a></p>
+					</div>
+					<div class="card">
+						<img src="../pictures/portraits/natania.png" alt="Picture of Natania" width="200"
+							height="200" />
+						<h1>Natania Christopher</h1>
+						<p class="title">Out There Developer</p>
+						<p id="bio">I'm a web developer for Out There. As a current junior at the University of Texas at
+							Austin, my major is psychology with a certificate in Elements of Computing.</p>
+						<p></p>
+						<hr>
+						<p id="bio"><a href="natania.christopher@gmail.com"> natania.christopher@gmail.com </a></p>
+					</div>
+					<div class="card">
+						<img src="../pictures/portraits/Zhengxuan.jpg" alt="Picture of Zhengxuan" width="200"
+							height="200" />
+						<h1>Zhengxuan Wang</h1>
+						<p class="title">Out There Developer</p>
+						<p id="bio">I'm a web developer for Out There. As a current junior at the University of Texas at
+							Austin, my major is economics with a certificate in Elements of Computing.</p>
+						<p></p>
+						<hr>
+						<p id="bio"><a href="znwang@utexas.edu"> znwang@utexas.edu </a></p>
+					</div>
+					<div class="card">
+						<img src="../pictures/portraits/alex_portrait.jpg" alt="Picture of Alex" width="200"
+							height="200" />
+						<h1>Alex <br>
+							Lee</h1>
+						<p class="title">Out There Developer</p>
+						<p id="bio">I'm a web developer for Out There. As a current junior at the University of Texas at
+							Austin, my major is economics with a certificate in Elements of Computing.</p>
+						<p></p>
+						<hr>
+						<p id="bio"><a href="alex_lee@utexas.edu"> alex_lee@utexas.edu </a></p>
+					</div>
 				</div>
 			</div>
-		</form>
-		<br>
-	<hr>
-	<strong>Developers</strong>
-	
-	</div>
-	
-	<center>
-	<div class="card">
-	  <img src="../pictures/portraits/matthew.png" alt = "Picture of Matthew" width = "200" height = "200" />
-	  <h1>Matthew Umana</h1>
-	  <p class="title">Out There Developer</p>
-	  <p id="bio"> I'm a web developer for Out There. As a current senior at the University of Texas at Austin, my major is Entertainment Technology with a certificate in Elements of Computing.</p>
-	  <p></p>
-	  <hr>
-	  <p id="bio"><a href="msu245@utexas.edu"> msu245@utexas.edu </a></p>
-	</div>	
-	<div class="card">
-	  <img src="../pictures/portraits/natania.png" alt = "Picture of Natania" width = "200" height = "200" />
-	  <h1>Natania Christopher</h1>
-	  <p class="title">Out There Developer</p>
-	  <p id="bio">I'm a web developer for Out There. As a current junior at the University of Texas at Austin, my major is psychology with a certificate in Elements of Computing.</p>
-	  <p></p>
-	  <hr>
-	  <p id="bio"><a href="natania.christopher@gmail.com"> natania.christopher@gmail.com </a></p>
-	</div>	
-	<div class="card">
-	  <img src="../pictures/portraits/Zhengxuan.jpg" alt = "Picture of Zhengxuan" width = "200" height = "200" />
-	  <h1>Zhengxuan Wang</h1>
-	  <p class="title">Out There Developer</p>
-	  <p id="bio">I'm a web developer for Out There. As a current junior at the University of Texas at Austin, my major is economics with a certificate in Elements of Computing.</p>
-	  <p></p>
-	  <hr>
-	  <p id="bio"><a href="znwang@utexas.edu"> znwang@utexas.edu </a></p>
-	</div>	
-	<div class="card">
-	  <img src="../pictures/portraits/alex_portrait.jpg" alt = "Picture of Alex" width = "200" height = "200"/>
-	  <h1>Alex <br>
-	  Lee</h1>
-	  <p class="title">Out There Developer</p>
-	  <p id="bio">I'm a web developer for Out There. As a current junior at the University of Texas at Austin, my major is economics with a certificate in Elements of Computing.</p>
-	  <p></p>
-	  <hr>
-	  <p id="bio"><a href="alex_lee@utexas.edu"> alex_lee@utexas.edu </a></p>
-	</div>	
-	</center>
-	</br>
-	<!-- footer -->
-	<div id="footer">
-		<div id="footertext">
-			<img id="footer-logo" src="../pictures/white_out-there_img.png" alt="logo image">
-			<p>
-				<a href="./about.html">About</a>
-			</p>
-			<p>
-				<a href="./search.html">Search</a>
-			</p>
-			<p>
-				<a href="./contact.html">Contact Us</a>
-			</p>
-			<p class="center">
-				<a href="mailto:msu245@utexas.edu">&#169; Out There 04/05/2021</a>
-			</p>
+		</div>
+		</br>
+		<!-- footer -->
+		<div id="footer">
+			<div id="footertext">
+				<img id="footer-logo" src="../pictures/white_out-there_img.png" alt="logo image">
+				<p>
+					<a href="./about.html">About</a>
+				</p>
+				<p>
+					<a href="./search.html">Search</a>
+				</p>
+				<p>
+					<a href="./contact.html">Contact Us</a>
+				</p>
+				<p class="center">
+					<a href="mailto:msu245@utexas.edu">&#169; Out There 04/05/2021</a>
+				</p>
+			</div>
 		</div>
 	</div>
 </body>

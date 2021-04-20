@@ -1,3 +1,13 @@
+#content {
+	position: absolute;
+	top: 10vh;
+	width: 100vw;
+  }
+  
+  #main-content {
+	height: fit-content;
+  }
+
 #container{
 	width: 90%;
 	margin: 10px auto;

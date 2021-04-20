@@ -1,3 +1,13 @@
+#content {
+  position: absolute;
+  top: 10vh;
+  width: 100vw;
+}
+
+#main-content {
+  height: fit-content;
+}
+
 #container{
 	width: 90%;
 	margin: 10px auto;
@@ -113,14 +123,19 @@
 	text-align:center;
 }
 
+#cards {
+  text-align: center;
+}
+
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 200px;
+  width: 220px;
+  height: 500px;
   margin: 15px;
   text-align: center;
   font-family: arial;
   border-radius: 5px;
-  display: inline-table;
+  display: inline-block;
   padding: 5px;
 }
 
@@ -150,4 +165,9 @@ textarea{
 	box-sizing: border-box;
 	resize: none;
 	border: 1px solid #ccc;
+}
+
+h1 {
+  margin: 0 !important;
+  font-size: 24px !important;
 }
