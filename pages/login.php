@@ -29,35 +29,33 @@
     </nav>
 
     <script language = "javascript" type = "text/javascript">
+        function ajaxFunction(server,user,pwd,dbName){
+               var ajaxRequest;  // The variable that makes Ajax possible!
+               
+               ajaxRequest = new XMLHttpRequest();
+               // Create a function that will receive data sent from the server and will update
+               // the div section in the same page.
+					
+               ajaxRequest.onreadystatechange = function(){
+                  if(ajaxRequest.readyState == 4){
+                     var ajaxDisplay = document.getElementById('ajaxDiv');
+                     ajaxDisplay.innerHTML = ajaxRequest.responseText;
+                  }
+               }
+               
+               // Now get the value from user and pass it to server script.
+					
+               var lastName = document.getElementById('lastName').value;
+               var firstName = document.getElementById('firstName').value;
+               var queryString = "?lastName=" + lastName ;
+            
+               queryString +=  "&firstName=" + firstName + "&server=" + server + "&user=" + user + "&pwd=" + pwd + "&dbName=" + dbName;
+               
+               ajaxRequest.open("GET", "login.php" + queryString, true);
+               ajaxRequest.send(null);
+            }
 
-        function ajaxFunction(){
-           var ajaxRequest;  // The variable that makes Ajax possible!
-           
-           ajaxRequest = new XMLHttpRequest();
-           
-           // Create a function that will receive data sent from the server and will update
-           // the div section in the same page.
-                
-           ajaxRequest.onreadystatechange = function(){
-              if(ajaxRequest.readyState == 4){
-                 var ajaxDisplay = document.getElementById('ajaxDiv');
-                 ajaxDisplay.innerHTML = ajaxRequest.responseText;
-              }
-           }
-           
-           // Now get the value from user and pass it to server script.
-                
-           var username = document.getElementById('username').value;
-           var password = document.getElementById('password').value;
-           var queryString = "?username=" + username;
-        
-           queryString +=  "&password=" + password;
-           
-           ajaxRequest.open("GET", "login.php" + queryString, true);
-           ajaxRequest.send(null);
-        }
-
-  </script>
+      </script>
     
 
 
@@ -117,10 +115,10 @@
 
      if ($result->fetch_array(MYSQLI_ASSOC)) {
         setcookie("username", $username, time() + (3600));
-        header("Location:Elon.html");
+        header("Location:search.html");
     } 
      else{
-        echo "<script>alert('Wrong Username or password!');</script>";
+        echo '<script>alert("Wrong Username or password!");</script>';
 
      }   
     ?>  
