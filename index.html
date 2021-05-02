@@ -7,6 +7,7 @@
     <meta name="description" content="Out There Site" />
     <meta name="author" content="Out There Team" />
     <link rel="stylesheet" href="./styles/home.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   </head>
   <body>
     <nav class="container-navbar">
@@ -66,5 +67,20 @@
         </p>
       </div>
     </div>
+
+    <script>
+      $.ajax({
+          url: "https://data.americorps.gov/resource/esav-hmkz.json",
+          type: "GET",
+          data: {
+            "$limit" : 100,
+            "$$app_token" : ""
+          }
+      }).done(function(data) {
+        alert("Retrieved " + data.length + " records from the dataset!");
+        console.log(data);
+      });
+    </script>
+
   </body>
 </html>
