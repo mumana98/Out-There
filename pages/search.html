@@ -38,8 +38,8 @@
 
       queryString += "&password=" + password;
 
-      //ajaxRequest.open("GET", "retrieveData.php" + queryString, true);
-      ajaxRequest.open("GET", "retrieveData.php", true);
+      ajaxRequest.open("GET", "retrieveData.php" + queryString, true);
+      //ajaxRequest.open("GET", "retrieveData.php", true);
       ajaxRequest.send(null);
     }
 
@@ -58,7 +58,7 @@
   <div id="content">
     <div id="main-content">
       <h1 style=font-size:38px>Search For Opportunities</h1>
-      <form class="searchBar" action="/action_page.php">
+      <form class="searchBar" method="POST" name="submit">
         <input type="text" placeholder="Search..." name="search" />
         <button type="submit" onclick = "ajaxFunction()"><i class="fa fa-search"></i></button>
       </form>
