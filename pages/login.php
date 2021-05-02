@@ -100,53 +100,29 @@
         $pwd    = "Being&cut\$Gun";
         $dbName = "cs329e_bulko_umana";
       
-      // Connect to MySQL Server
-  
-        $mysqli = new mysqli($server, $user, $pwd, $dbName);
-  
-        if ($mysqli->connect_errno) {
-            die('Connect Error: ' . $mysqli->connect_errno . ": " .  $mysqli->connect_error);
-        }
-      
-        //Select Database
-        $mysqli->select_db($dbName) or die($mysqli->error);
-  
-  
-      
-        // Retrieve data from Query String
-        $username = $_GET['username'];
-        $password = $_GET['password'];
-      
-        // Escape User Input to help prevent SQL Injection
-        $username = $mysqli->real_escape_string($username);
-        $password = $mysqli->real_escape_string($password);
-  
-        //build query
-        $query = "SELECT * FROM users WHERE username = '$username' AND PASSWORD = '$password'"; //username and password match
-        
-  
-        //Execute query
-        $result = $mysqli->query($query) or die($mysqli->error);
-      
-        if(mysqli_num_rows($result) == 0){ //user and password does not exist yet
-              $query = "UPDATE users SET PASSWORD = '$password' WHERE USERNAME = '$username';";
-      
-              $result = $mysqli->query($query);
-      
-              // Verify the result
-              if (!$result) {
-                  die("Query failed: ($mysqli->error <br>");
-              } 
-              else {
-                echo '<script>alert("Wrong username or password!")</script>'<br> <br>;
-              }
-          
-            
-        else{
-            setcookie("username", $username, time() + (3600));
-            header("Location:index.html");
-            }
-  
+      //create sql table
+      if ($username != '' || $password != '') {
+        $mysqli = new mysqli($dbserver, $dbuser, $dbpass, $dbname);
+    }
+    //Select database
+    $mysqli->select_db($dbname) or die($mysqli->error);
+
+    // Escape User Input to help prevent SQL Injection
+    $username = $mysqli->real_escape_string($username);
+    $password = $mysqli->real_escape_string($password);
+
+    //build query
+     $query = "SELECT username, password FROM passwords WHERE username = '$username' AND password = '$password'";
+     $result = $mysqli->query($query) or die($mysqli->error);
+
+     if ($result->fetch_array(MYSQLI_ASSOC)) {
+        setcookie("username", $username, time() + (3600));
+        header("Location:Elon.html");
+    } 
+     else{
+        echo "<script>alert('Wrong Username or password!');</script>";
+
+     }   
     ?>  
 
          </body>
