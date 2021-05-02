@@ -18,53 +18,32 @@
     //Select Database
     $mysqli->select_db($dbName) or die($mysqli->error);
 
-
-    
-    // Retrieve data from Query String
-    $username = $_GET['username'];
-    $password = $_GET['password'];
     
     // Escape User Input to help prevent SQL Injection
     $username = $mysqli->real_escape_string($username);
     $password = $mysqli->real_escape_string($password);
 
     //build query
-    $query = "SELECT * FROM PASSWORDS WHERE username = '$username' AND PASSWORD = '$password'"; //username and password match
-    $query2 = "SELECT * FROM PASSWORDS WHERE username = '$username' AND PASSWORD != '$password'"; //only username matches
+    $query = "SELECT * FROM OPPORTUNITIES";
 
     //Execute query
     $result = $mysqli->query($query) or die($mysqli->error);
-    $result2 = $mysqli->query($query2) or die($mysqli->error);
     
     if(mysqli_num_rows($result) == 0){ //user and password does not exist yet
-        if(mysqli_num_rows($result2) > 0){
-            $query = "UPDATE PASSWORDS SET PASSWORD = '$password' WHERE USERNAME = '$username';";
-    
-            $result = $mysqli->query($query);
-    
-            // Verify the result
-            if (!$result) {
-                die("Query failed: ($mysqli->error <br>");
-            } else {
-                echo "Password changed <br> <br>";
-            }
-        }else{
-
-            //build query
-            $query = "INSERT INTO PASSWORDS (USERNAME, PASSWORD) VALUES ('$username', '$password');";
-
-            $result = $mysqli->query($query);
-
-            // Verify the result
-            if (!$result) {
-                die("Query failed: ($mysqli->error <br>");
-            } else {
-                echo "New user registered <br> <br>";
-            }
-        }
+        echo "<p style='color:#f00'>No opportunities found!</p>";
     }
     else{
-        echo "User and password confirmed";
+        while ($row = $result->fetch_row()) {
+            echo "<tr>  
+                    <td>$row[1]</td> 
+                    <td>$row[2]</td>
+                    <td>$row[3]</td> 
+                    <td>$row[4]</td>  
+                    <td>$row[5]</td>
+                    <td>$row[6]</td> 
+                    <td>$row[7]</td>  
+                </tr>";
+        }
     }
 
 
