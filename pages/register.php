@@ -127,50 +127,57 @@
         $pwd    = "Being&cut\$Gun";
         $dbName = "cs329e_bulko_umana";
       
-                //create sql table
-                  if ($USERNAME != '' || $password != '') {
-                    $mysqli = new mysqli($dbserver, $dbuser, $dbpass, $dbname);
-                }
-                //Select database
-                $mysqli->select_db($dbname) or die($mysqli->error);
+        //create sql table
+        if ($USERNAME != '' || $password != '') {
+            $mysqli = new mysqli($dbserver, $dbuser, $dbpass, $dbname);
+        }
+        //Select database
+        $mysqli->select_db($dbname) or die($mysqli->error);
     
-                // Escape User Input to help prevent SQL Injection
-                $USERNAME = $mysqli->real_escape_string($USERNAME);
-                $PASSWORD = $mysqli->real_escape_string($PASSWORD);
-                $FIRSTNAME = $mysqli->real_escape_string($FIRSTNAME);
-                $LASTNAME = $mysqli->real_escape_string($LASTNAME);
-                $EMAIL = $mysqli->real_escape_string($EMAIL);
-                $STATE = $mysqli->real_escape_string($STATE);
-                $CITY = $mysqli->real_escape_string($CITY);
+        // Escape User Input to help prevent SQL Injection
+        $USERNAME = $mysqli->real_escape_string($USERNAME);
+        $PASSWORD = $mysqli->real_escape_string($PASSWORD);
+        $FIRSTNAME = $mysqli->real_escape_string($FIRSTNAME);
+        $LASTNAME = $mysqli->real_escape_string($LASTNAME);
+        $EMAIL = $mysqli->real_escape_string($EMAIL);
+        $STATE = $mysqli->real_escape_string($STATE);
+        $CITY = $mysqli->real_escape_string($CITY);
     
-                //build query
-                 $query = "SELECT username, password,firstname,lastname,email,state,city FROM USERS WHERE username = '$USERNAME' AND password = '$PASSWORD' AND firstname='$FIRSTNAME' AND lastname='$LASTNAME' AND email='$EMAIL' AND state='$STATE' AND city='$CITY';
-                 $result = $mysqli->query($query) or die($mysqli->error);
-    
-                 if ($result->fetch_array(MYSQLI_ASSOC)) {
-                    echo "<script>alert('User and password exists');</script>";
-                } 
-                    else {
-                    //Build and execute query
-                    $query = "SELECT username FROM USERS WHERE username = '$USERNAME'";
-                    $result = $mysqli->query($query) or die($mysqli->error);
-                    if ($result->fetch_array(MYSQLI_ASSOC)) {
-                        $query = "UPDATE USERS SET password = '$PASSWORD' WHERE username = '$USERNAME'";
-                        $result = $mysqli->query($query) or die($mysqli->error);
-                        echo "<script>alert('Password updated');</script>";
-                     } 
-                    else {
-                        // build and execute query
-                        $query = "INSERT INTO USERS (username, password) VALUES('$username', '$password')";
-                        $result = $mysqli->query($query) or die($mysqli->error);
-                        echo "<script>alert('New user registered');</script>";
-                    }
-                }
-            ?>
-  
-  
-  ?>  
+        //create sql table
+        if ($username != '' || $password != '') {
+            $mysqli = new mysqli($dbserver, $dbuser, $dbpass, $dbname);
+        }
+        //Select database
+        $mysqli->select_db($dbname) or die($mysqli->error);
 
+        // Escape User Input to help prevent SQL Injection
+        $USERNAME = $mysqli->real_escape_string($USERNAME);
+        $PASSWORD = $mysqli->real_escape_string($USERNAME);
+
+        //build query
+        $query = "SELECT username, password FROM passwords WHERE username = '$username' AND password = '$password'";
+        $result = $mysqli->query($query) or die($mysqli->error);
+
+        if ($result->fetch_array(MYSQLI_ASSOC)) {
+            echo 'User and password confirmed';
+        } 
+        else {
+        //Build and execute query
+        $query = "SELECT username FROM USERS WHERE username = '$USERNAME'";
+        $result = $mysqli->query($query) or die($mysqli->error);
+        if ($result->fetch_array(MYSQLI_ASSOC)) {
+            $query = "UPDATE USERS SET password = '$PASSWORD' WHERE username = '$USERNAME'";
+            $result = $mysqli->query($query) or die($mysqli->error);
+            echo 'Password changed';
+        } 
+        else {
+        // build and execute query
+            $query = "INSERT INTO passwords (username, password) VALUES('$USERNAME', '$PASSWORD')";
+            $result = $mysqli->query($query) or die($mysqli->error);
+            echo 'New user registered';
+        }
+    }
+    ?>
 
         </div>
             <div id="footer">
