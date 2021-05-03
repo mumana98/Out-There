@@ -30,17 +30,11 @@
         }
       }
 
-      // Now get the value from user and pass it to server script.
-
-      var username = document.getElementById('username').value;
-      var password = document.getElementById('password').value;
-      var queryString = "?username=" + username;
-
-      queryString += "&password=" + password;
+      var queryString = "?username=" + "Matthew";
 
       ajaxRequest.open("GET", "../backend/retrieveData.php" + queryString, true);
       //ajaxRequest.open("GET", "retrieveData.php", true);
-      //ajaxRequest.send(null);
+      ajaxRequest.send(null);
     }
 
   </script>
@@ -60,7 +54,7 @@
       <h1 style=font-size:38px>Search For Opportunities</h1>
       <form class="searchBar" method="POST" name="submit">
         <input type="text" placeholder="Search..." name="search" />
-        <button type="submit" onclick="ajaxFunction()"><i class="fa fa-search"></i></button>
+        <button onclick="ajaxFunction()"><i class="fa fa-search"></i></button>
       </form>
       <div id='ajaxDiv'></div>
     </div>
