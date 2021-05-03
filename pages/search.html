@@ -31,16 +31,16 @@
 
       var queryString = "?username=" + "Matthew";
 
-      $.ajax({
-          type: "POST",
-          url: "/retrieveData.php",
-          data: {action: 'test'},
-          dataType:'JSON', 
-          success: function(response){
-              console.log(response);
-          }
-      });
-      //ajaxRequest.open("GET", "retrieveData.php", true);
+      // $.ajax({
+      //     type: "POST",
+      //     url: "/retrieveData.php",
+      //     data: {action: 'test'},
+      //     dataType:'JSON', 
+      //     success: function(response){
+      //         console.log(response);
+      //     }
+      // });
+      ajaxRequest.open("POST", "retrieveData.php", true);
       ajaxRequest.send(null);
     }
 
