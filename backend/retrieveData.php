@@ -37,28 +37,28 @@
     else{
         echo "<div style='text-align:center'>";
         echo "<h2> $num_rows opportunities found!</h2>";
-        echo "<table border='2'>
-        <tr>
-            <th>TITLE</th>
-            <th>ORGANIZATION</th>
-            <th>LOCATION</th>
-            <th>INPERSON</th>
-            <th>DESCRIPTION</th>
-            <th>DATE</th>
-            <th>LINK</th>
-        </tr>";
         while ($row = $result->fetch_row()) {
-            echo "<tr>  
-                    <td>$row[1]</td> 
-                    <td>$row[2]</td>
-                    <td>$row[3]</td> 
-                    <td>$row[4]</td>  
-                    <td>$row[5]</td>
-                    <td>$row[6]</td> 
-                    <td>$row[7]</td>  
-                </tr>";
+
+            echo "<div class='center-content-card'>
+                    <h2>$row[1]</h2>
+                    <table style='text-align: left;'>
+                    <tr>
+                        <td><strong>Organization:</strong> $row[2]</td>
+                        <td class='spacer'></td>
+                        <td><strong>Location:</strong> $row[3]</td>
+                    </tr>
+                    <tr>
+                        <td><strong>In-Person:</strong> $row[4]</td>
+                        <td class='spacer'></td>
+                        <td><strong>Date:</strong> $row[6]</td>
+                    </tr>
+                    </table>
+                    <div class='hr'></div>
+                    <p class='description'>$row[5]</p>
+                    <a href='$row[7]' class='button'>Volunteer Here</a>
+                </div>";
+
         }
-        echo "</table> <br><br><br>";
         echo "</div>";
     }
 
