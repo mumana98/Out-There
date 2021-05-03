@@ -22,8 +22,8 @@
 
     
     // Escape User Input to help prevent SQL Injection
-    $username = $mysqli->real_escape_string($username);
-    $password = $mysqli->real_escape_string($password);
+    // $username = $mysqli->real_escape_string($username);
+    // $password = $mysqli->real_escape_string($password);
 
     //build query
     $query = "SELECT * FROM OPPORTUNITIES";
