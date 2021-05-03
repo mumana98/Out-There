@@ -121,7 +121,23 @@
     <?php
         error_reporting(E_ALL);
         ini_set("display_errors", "on");
-      
+
+
+        $username = document.getElementById("username").value;
+        $password = document.getElementById("password").value;
+        $firstname = document.getElementById("firstname").value;
+        $lastname = document.getElementById("lastname").value;
+        $email = document.getElementById("email").value;
+        $state = document.getElementById("state").value;
+        $city = document.getElementById("city").value;
+        $queryString = "?username=" + username;
+        $USERNAME = $_POST["username"];
+        $PASSWORD = $_POST["password"];
+        $FIRSTNAME = $_POST["firstname"];
+        $LASTNAME = $_POST["lastname"];
+        $EMAIL = $_POST["email"];
+        $STATE = $_POST["state"];
+        $CITY = $_POST["city"];
         $server = "spring-2021.cs.utexas.edu";
         $user   = "cs329e_bulko_umana";
         $pwd    = "Being&cut\$Gun";
