@@ -31,15 +31,6 @@
 
       var queryString = "?username=" + "Matthew";
 
-      // $.ajax({
-      //     type: "POST",
-      //     url: "/retrieveData.php",
-      //     data: {action: 'test'},
-      //     dataType:'JSON', 
-      //     success: function(response){
-      //         console.log(response);
-      //     }
-      // });
       ajaxRequest.open("POST", "retrieveData.php", true);
       ajaxRequest.send(null);
     }
@@ -61,7 +52,7 @@
       <h1 style=font-size:38px>Search For Opportunities</h1>
       <form class="searchBar" method="POST" name="submit">
         <input type="text" placeholder="Search..." name="search" />
-        <button onclick="ajaxFunction()"><i class="fa fa-search"></i></button>
+        <button onclick="ajaxFunction()" onsubmit="return false"><i class="fa fa-search"></i></button>
       </form>
       <div id='ajaxDiv'></div>
     </div>

@@ -39,6 +39,16 @@
         echo "<p style='color:#f00'>No opportunities found!</p>";
     }
     else{
+        echo "<table border='2'>
+        <tr>
+            <th>TITLE</th>
+            <th>ORGANIZATION</th>
+            <th>LOCATION</th>
+            <th>INPERSON</th>
+            <th>DESCRIPTION</th>
+            <th>DATE</th>
+            <th>LINK</th>
+        </tr>";
         while ($row = $result->fetch_row()) {
             echo "<tr>  
                     <td>$row[1]</td> 
@@ -50,6 +60,7 @@
                     <td>$row[7]</td>  
                 </tr>";
         }
+        echo "</table> <br><br><br>";
     }
 
 
