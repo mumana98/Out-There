@@ -93,9 +93,9 @@
         error_reporting(E_ALL);
         ini_set("display_errors", "on");
         
-        $password = document.getElementById('password').value;
-        $username = document.getElementById('username').value;
-        $server = "spring-2021.cs.utexas.edu";
+        $dom = new DomDocument;
+        $username = $dom->getElementById("username");
+        $password = $dom->getElementById("password");
         $user   = "cs329e_bulko_umana";
         $pwd    = "Being&cut\$Gun";
         $dbName = "cs329e_bulko_umana";

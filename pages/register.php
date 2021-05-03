@@ -122,15 +122,14 @@
         error_reporting(E_ALL);
         ini_set("display_errors", "on");
 
-
-        $username = document.getElementById("username").value;
-        $password = document.getElementById("password").value;
-        $firstname = document.getElementById("firstname").value;
-        $lastname = document.getElementById("lastname").value;
-        $email = document.getElementById("email").value;
-        $state = document.getElementById("state").value;
-        $city = document.getElementById("city").value;
-        $queryString = "?username=" + username;
+        $dom = new DomDocument;
+        $username = $dom->getElementById("username");
+        $password = $dom->getElementById("password");
+        $firstname = $dom->getElementById("firstname");
+        $lastname = $dom->getElementById("lastname");
+        $email = $dom->getElementById("email");
+        $state = $dom->getElementById("state");
+        $city = $dom->getElementById("city");
         $USERNAME = $_POST["username"];
         $PASSWORD = $_POST["password"];
         $FIRSTNAME = $_POST["firstname"];
