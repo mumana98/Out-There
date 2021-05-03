@@ -1,4 +1,7 @@
 <?php
+
+    echo "This is PHP!";
+
     error_reporting(E_ALL);
     ini_set("display_errors", "on");
     
@@ -10,6 +13,7 @@
     // Connect to MySQL Server
 
     $mysqli = new mysqli($server, $user, $pwd, $dbName);
+    
 
     if ($mysqli->connect_errno) {
         die('Connect Error: ' . $mysqli->connect_errno . ": " .  $mysqli->connect_error);
