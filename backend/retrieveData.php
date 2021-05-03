@@ -38,11 +38,11 @@
     $result = $mysqli->query($query) or die($mysqli->error);
     $num_rows = mysqli_num_rows($result);
     if(mysqli_num_rows($result) == 0){ //user and password does not exist yet
-        echo "<p style='color:#f00'>No opportunities found!</p>";
+        echo "<h2 style='color:#f00'> $num_rows opportunities found</h2>";
     }
     else{
         echo "<div style='text-align:center'>";
-        echo "<h2> $num_rows opportunities found!</h2>";
+        echo "<h2> $num_rows opportunities found</h2>";
         while ($row = $result->fetch_row()) {
 
             echo "<div class='center-content-card'>
