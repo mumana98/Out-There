@@ -35,7 +35,8 @@
         echo "<p style='color:#f00'>No opportunities found!</p>";
     }
     else{
-        echo "<h3> $num_rows opportunities found!</h3>";
+        echo "<div style='text-align:center'>";
+        echo "<h2> $num_rows opportunities found!</h2>";
         echo "<table border='2'>
         <tr>
             <th>TITLE</th>
@@ -58,6 +59,7 @@
                 </tr>";
         }
         echo "</table> <br><br><br>";
+        echo "</div>";
     }
 
 
