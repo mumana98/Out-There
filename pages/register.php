@@ -155,11 +155,11 @@
         $PASSWORD = $mysqli->real_escape_string($USERNAME);
 
         //build query
-        $query = "SELECT username, password FROM passwords WHERE username = '$username' AND password = '$password'";
+        $query = "SELECT username, password FROM USERS WHERE username = '$USERNAME' AND password = '$PASSWORD'";
         $result = $mysqli->query($query) or die($mysqli->error);
 
         if ($result->fetch_array(MYSQLI_ASSOC)) {
-            echo 'User and password confirmed';
+            echo 'alert("User already exists! Please login.")';
         } 
         else {
         //Build and execute query
@@ -168,13 +168,13 @@
         if ($result->fetch_array(MYSQLI_ASSOC)) {
             $query = "UPDATE USERS SET password = '$PASSWORD' WHERE username = '$USERNAME'";
             $result = $mysqli->query($query) or die($mysqli->error);
-            echo 'Password changed';
+            echo 'alert("Password changed. Please login.")';
         } 
         else {
         // build and execute query
-            $query = "INSERT INTO passwords (username, password) VALUES('$USERNAME', '$PASSWORD')";
+            $query = "INSERT INTO USERS (username, password) VALUES('$USERNAME', '$PASSWORD')";
             $result = $mysqli->query($query) or die($mysqli->error);
-            echo 'New user registered';
+            echo 'alert("New user registered. Please login.")';
         }
     }
     ?>
