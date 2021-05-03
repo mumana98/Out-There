@@ -99,18 +99,18 @@
         $dbName = "cs329e_bulko_umana";
       
       //create sql table
-      if ($username != '' || $password != '') {
+      if ($USERNAME != '' || $PASSWORD != '') {
         $mysqli = new mysqli($dbserver, $dbuser, $dbpass, $dbname);
     }
     //Select database
     $mysqli->select_db($dbname) or die($mysqli->error);
 
     // Escape User Input to help prevent SQL Injection
-    $username = $mysqli->real_escape_string($username);
-    $password = $mysqli->real_escape_string($password);
+    $USERNAME = $mysqli->real_escape_string($USERNAME);
+    $PASSWORD = $mysqli->real_escape_string($PASSWORD);
 
     //build query
-     $query = "SELECT username, password FROM passwords WHERE username = '$username' AND password = '$password'";
+     $query = "SELECT username, password FROM USERS WHERE username = '$USERNAME' AND password = '$PASSWORD'";
      $result = $mysqli->query($query) or die($mysqli->error);
 
      if ($result->fetch_array(MYSQLI_ASSOC)) {
