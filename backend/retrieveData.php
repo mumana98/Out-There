@@ -29,10 +29,10 @@
 
     //build query
     if($searchTerm == ""){
-        $query = "SELECT * FROM OPPORTUNITIES";
+        $query = "SELECT * FROM OPPORTUNITIES;";
     }
     else{
-        $query = "SELECT * FROM OPPORTUNITIES WHERE TITLE LIKE '%{$searchTerm}%';";
+        $query = "SELECT * FROM OPPORTUNITIES WHERE TITLE LIKE '%$searchTerm%';";
     }
     //Execute query
     $result = $mysqli->query($query) or die($mysqli->error);
