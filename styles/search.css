@@ -181,6 +181,8 @@ form.searchBar::after {
     text-align: center;
     overflow: hidden;
     margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
     background-color: #fff;
     color: #000;
     border: 2px solid #4caf50;
