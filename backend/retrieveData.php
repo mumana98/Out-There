@@ -1,7 +1,5 @@
 <?php
 
-    echo "This is PHP!";
-
     error_reporting(E_ALL);
     ini_set("display_errors", "on");
     
@@ -17,8 +15,6 @@
 
     if ($mysqli->connect_errno) {
         die('Connect Error: ' . $mysqli->connect_errno . ": " .  $mysqli->connect_error);
-    } else {
-        echo "Connection Success!";
     }
     
     //Select Database
@@ -34,11 +30,12 @@
 
     //Execute query
     $result = $mysqli->query($query) or die($mysqli->error);
-    
+    $num_rows = mysqli_num_rows($result);
     if(mysqli_num_rows($result) == 0){ //user and password does not exist yet
         echo "<p style='color:#f00'>No opportunities found!</p>";
     }
     else{
+        echo "<h3> $num_rows opportunities found!</h3>";
         echo "<table border='2'>
         <tr>
             <th>TITLE</th>
