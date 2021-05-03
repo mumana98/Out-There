@@ -180,7 +180,7 @@ form.searchBar::after {
     padding: 30px;
     text-align: center;
     overflow: hidden;
-    margin: 15px;
+    margin: auto;
     background-color: #fff;
     color: #000;
     border: 2px solid #4caf50;
@@ -221,7 +221,7 @@ img {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    width: 15%;
+    width: 25%;
     font-size: 16px;
     margin: 0 auto;
     cursor: pointer;
