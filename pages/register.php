@@ -91,7 +91,7 @@
 
                     <label for="username">Username:</label>
                     <br>
-                    <input type="password" id="username" name="un" required><br><br>
+                    <input type="text" id="username" name="un" required><br><br>
 
                     <label for="password">Password:</label>
                     <br>
