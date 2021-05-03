@@ -84,7 +84,7 @@
             <br />
             <input type="submit" value="Login" />
             <br />
-            <a href="./register.html">Don't have an account? Register here.</a>
+            <a href="./register.php">Don't have an account? Register here.</a>
           </form>
         </div>
       </div>
