@@ -29,9 +29,10 @@
         }
       }
 
-      var queryString = "?username=" + "Matthew";
+      var searchTerm = document.getElementById('searchTerm').value; 
+      var queryString = "?searchTerm=" + searchTerm;
 
-      ajaxRequest.open("POST", "../backend/retrieveData.php", true);
+      ajaxRequest.open("POST", "../backend/retrieveData.php" + queryString, true);
       ajaxRequest.send(null);
     }
 
@@ -51,7 +52,7 @@
     <div id="main-content">
       <h1 style=font-size:38px>Search For Opportunities</h1>
       <form class="searchBar" method="GET" name="submit">
-        <input type="text" placeholder="Search..." name="search" />
+        <input type="text" placeholder="Search..." name="searchTerm" id="searchTerm"/>
         <button type="button" onclick="ajaxFunction()" onsubmit="return false"><i class="fa fa-search"></i></button>
       </form>
       <div id='ajaxDiv'></div>

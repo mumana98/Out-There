@@ -9,7 +9,6 @@
     $dbName = "cs329e_bulko_umana";
     
     // Connect to MySQL Server
-
     $mysqli = new mysqli($server, $user, $pwd, $dbName);
     
 
@@ -25,9 +24,16 @@
     // $username = $mysqli->real_escape_string($username);
     // $password = $mysqli->real_escape_string($password);
 
-    //build query
-    $query = "SELECT * FROM OPPORTUNITIES";
+    $searchTerm = $_GET["searchTerm"];
+    $searchTerm = $mysqli->real_escape_string($searchTerm);
 
+    //build query
+    if($searchTerm == ""){
+        $query = "SELECT * FROM OPPORTUNITIES";
+    }
+    else{
+        $query = "SELECT * FROM OPPORTUNITIES WHERE TITLE LIKE '%{$searchTerm}%';";
+    }
     //Execute query
     $result = $mysqli->query($query) or die($mysqli->error);
     $num_rows = mysqli_num_rows($result);
