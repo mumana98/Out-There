@@ -32,7 +32,15 @@
 
       var queryString = "?username=" + "Matthew";
 
-      ajaxRequest.open("GET", "retrieveData.php" + queryString, true);
+      $.ajax({
+          type: "GET",
+          url: "/retrieveData.php",
+          data: {action: 'test'},
+          dataType:'JSON', 
+          success: function(response){
+              console.log(response);
+          }
+      });
       //ajaxRequest.open("GET", "retrieveData.php", true);
       ajaxRequest.send(null);
     }
