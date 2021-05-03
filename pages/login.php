@@ -45,8 +45,8 @@
                
                // Now get the value from user and pass it to server script.
 					
-               var lastName = document.getElementById('lastName').value;
-               var firstName = document.getElementById('firstName').value;
+               var password = document.getElementById('password').value;
+               var username = document.getElementById('username').value;
                var queryString = "?lastName=" + lastName ;
             
                queryString +=  "&firstName=" + firstName + "&server=" + server + "&user=" + user + "&pwd=" + pwd + "&dbName=" + dbName;
@@ -92,11 +92,17 @@
       <?php
         error_reporting(E_ALL);
         ini_set("display_errors", "on");
-      
+        
+        $password = document.getElementById('password').value;
+        $username = document.getElementById('username').value;
         $server = "spring-2021.cs.utexas.edu";
         $user   = "cs329e_bulko_umana";
         $pwd    = "Being&cut\$Gun";
         $dbName = "cs329e_bulko_umana";
+        $USERNAME = $_POST["username"];
+        $PASSWORD = $_POST["password"];
+        
+
       
       //create sql table
       if ($USERNAME != '' || $PASSWORD != '') {
