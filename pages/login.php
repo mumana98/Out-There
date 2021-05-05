@@ -45,11 +45,11 @@
                
                // Now get the value from user and pass it to server script.
 					
-               var password = document.getElementById('password').value;
-               var username = document.getElementById('username').value;
-               var queryString = "?lastName=" + lastName ;
+               var PASSWORD = document.getElementById('PASSWORD').value;
+               var USERNAME = document.getElementById('USERNAME').value;
+               var queryString = "?PASSWORD=" + PASSWORD ;
             
-               queryString +=  "&firstName=" + firstName + "&server=" + server + "&user=" + user + "&pwd=" + pwd + "&dbName=" + dbName;
+               queryString +=  "&USERNAME=" + USERNAME + "&server=" + server + "&user=" + user + "&pwd=" + pwd + "&dbName=" + dbName;
                
                ajaxRequest.open("GET", "login.php" + queryString, true);
                ajaxRequest.send(null);
@@ -72,14 +72,14 @@
             <br />
             <br />
             <br />
-            <label for="un">Username:</label>
+            <label for="USERNAME">Username:</label>
             <br />
-            <input type="text" id="un" name="un" />
+            <input type="text" id="USERNAME" name="username" required/>
             <br />
             <br />
-            <label for="pw">Password:</label>
+            <label for="PASSWORD">Password:</label>
             <br />
-            <input type="password" id="pw" name="pw" />
+            <input type="password" id="PASSWORD" name="password" required/>
             <br />
             <br />
             <input type="submit" value="Login" />
@@ -89,18 +89,17 @@
         </div>
       </div>
 
+      
+
       <?php
         error_reporting(E_ALL);
         ini_set("display_errors", "on");
-        
-        $dom = new DomDocument;
-        $username = $dom->getElementById("username");
-        $password = $dom->getElementById("password");
+        $USERNAME=$_POST["USERNAME"];
+        $PASSWORD=$_POST["PASSWORD"];
         $user   = "cs329e_bulko_umana";
         $pwd    = "Being&cut\$Gun";
         $dbName = "cs329e_bulko_umana";
-        $USERNAME = $_POST["username"];
-        $PASSWORD = $_POST["password"];
+        $server = "spring-2021.cs.utexas.edu";
         
 
       
@@ -116,15 +115,15 @@
     $PASSWORD = $mysqli->real_escape_string($PASSWORD);
 
     //build query
-     $query = "SELECT username, password FROM USERS WHERE username = '$USERNAME' AND password = '$PASSWORD'";
+     $query = "SELECT USERNAME, PASSWORD FROM USERS WHERE USERNAME = '$USERNAME' AND PASSWORD = '$PASSWORD'";
      $result = $mysqli->query($query) or die($mysqli->error);
 
      if ($result->fetch_array(MYSQLI_ASSOC)) {
-        setcookie("username", $username, time() + (3600));
+        setcookie("USERNAME", $USERNAME, time() + (3600));
         header("Location:search.html");
     } 
      else{
-        echo '<script>alert("Wrong Username or password!");</script>';
+        echo alert("Wrong Username or password!");
 
      }   
     ?>  
