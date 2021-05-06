@@ -53,7 +53,7 @@
         if (!$result) {
             die("Query failed: ($mysqli->error <br>");
         } else {
-            echo "You are now registered";
+            //echo "You are now registered";
 
             setcookie('firstname', $firstname, time() + (10 * 365 * 24 * 60 * 60), '/');
             setcookie('lastname', $lastname, time() + (10 * 365 * 24 * 60 * 60), '/');
