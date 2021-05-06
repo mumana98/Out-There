@@ -54,13 +54,13 @@
             die("Query failed: ($mysqli->error <br>");
         } else {
             echo "You are now registered";
-            
+
             setcookie('firstname', $firstname, time() + (10 * 365 * 24 * 60 * 60), '/');
             setcookie('lastname', $lastname, time() + (10 * 365 * 24 * 60 * 60), '/');
             setcookie('email', $email, time() + (10 * 365 * 24 * 60 * 60), '/');
             setcookie('city', $city, time() + (10 * 365 * 24 * 60 * 60), '/');
             setcookie('state', $state, time() + (10 * 365 * 24 * 60 * 60), '/');
-            
+            echo "OK";
             header("Location: ../pages/search.html");
         }
     }
