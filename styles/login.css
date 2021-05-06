@@ -79,3 +79,23 @@ input[type="password"]:focus {
   background-color: rgba(255, 255, 255, 0.5);
   color: #4caf50;
 }
+
+#submit{
+  margin-bottom: 50px;
+  align-items: center;
+  float: center;
+  width: 10%;
+  padding: 10px;
+  background: #00b300;
+  color: white;
+  font-size: 17px;
+  border: 2px solid #4CAF50;
+  border-radius: 10px 10px 10px 10px;
+  cursor: pointer;
+}
+
+#submit:hover{
+  border: 2px solid #4CAF50;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #4CAF50;
+}
