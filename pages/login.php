@@ -45,11 +45,11 @@
                
                // Now get the value from user and pass it to server script.
 					
-               var lastName = document.getElementById('lastName').value;
-               var firstName = document.getElementById('firstName').value;
-               var queryString = "?lastName=" + lastName ;
+               var PASSWORD = document.getElementById('PASSWORD').value;
+               var USERNAME = document.getElementById('USERNAME').value;
+               var queryString = "?PASSWORD=" + PASSWORD ;
             
-               queryString +=  "&firstName=" + firstName + "&server=" + server + "&user=" + user + "&pwd=" + pwd + "&dbName=" + dbName;
+               queryString +=  "&USERNAME=" + USERNAME + "&server=" + server + "&user=" + user + "&pwd=" + pwd + "&dbName=" + dbName;
                
                ajaxRequest.open("GET", "login.php" + queryString, true);
                ajaxRequest.send(null);
@@ -72,53 +72,58 @@
             <br />
             <br />
             <br />
-            <label for="un">Username:</label>
+            <label for="USERNAME">Username:</label>
             <br />
-            <input type="text" id="un" name="un" />
+            <input type="text" id="USERNAME" name="username" required/>
             <br />
             <br />
-            <label for="pw">Password:</label>
+            <label for="PASSWORD">Password:</label>
             <br />
-            <input type="password" id="pw" name="pw" />
+            <input type="password" id="PASSWORD" name="password" required/>
             <br />
             <br />
             <input type="submit" value="Login" />
             <br />
-            <a href="./register.html">Don't have an account? Register here.</a>
+            <a href="./register.php">Don't have an account? Register here.</a>
           </form>
         </div>
       </div>
 
+      
+
       <?php
         error_reporting(E_ALL);
         ini_set("display_errors", "on");
-      
-        $server = "spring-2021.cs.utexas.edu";
+        $USERNAME=$_POST["USERNAME"];
+        $PASSWORD=$_POST["PASSWORD"];
         $user   = "cs329e_bulko_umana";
         $pwd    = "Being&cut\$Gun";
         $dbName = "cs329e_bulko_umana";
+        $server = "spring-2021.cs.utexas.edu";
+        
+
       
       //create sql table
-      if ($username != '' || $password != '') {
+      if ($USERNAME != '' || $PASSWORD != '') {
         $mysqli = new mysqli($dbserver, $dbuser, $dbpass, $dbname);
     }
     //Select database
     $mysqli->select_db($dbname) or die($mysqli->error);
 
     // Escape User Input to help prevent SQL Injection
-    $username = $mysqli->real_escape_string($username);
-    $password = $mysqli->real_escape_string($password);
+    $USERNAME = $mysqli->real_escape_string($USERNAME);
+    $PASSWORD = $mysqli->real_escape_string($PASSWORD);
 
     //build query
-     $query = "SELECT username, password FROM passwords WHERE username = '$username' AND password = '$password'";
+     $query = "SELECT USERNAME, PASSWORD FROM USERS WHERE USERNAME = '$USERNAME' AND PASSWORD = '$PASSWORD'";
      $result = $mysqli->query($query) or die($mysqli->error);
 
      if ($result->fetch_array(MYSQLI_ASSOC)) {
-        setcookie("username", $username, time() + (3600));
+        setcookie("USERNAME", $USERNAME, time() + (3600));
         header("Location:search.html");
     } 
      else{
-        echo '<script>alert("Wrong Username or password!");</script>';
+        echo alert("Wrong Username or password!");
 
      }   
     ?>  
