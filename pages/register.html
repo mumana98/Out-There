@@ -29,7 +29,8 @@
                         window.location.replace("./search.html");    
                     }
                     else{
-                        console.log("Not the same: " + ajaxRequest.responseText)
+                        var ajaxDisplay = document.getElementById('ajaxDiv');
+                        ajaxDisplay.innerHTML = ajaxRequest.responseText;
                     }
                 }
             }
@@ -66,7 +67,6 @@
     <div id="content">
         <div id="main-content">
             <div class="container-body">
-                <div id='ajaxDiv'></div>
                 <form class="form-body" id="form" action="../backend/register.php" method="POST">
                     <br>
                     <br>
@@ -77,6 +77,7 @@
                         Register your profile here in order to receive e-mail newsletters and
                         work recommendations that suits your preferences from us!
                     </h3>
+                    <div id='ajaxDiv'></div>
                     <br>
                     <br>
                     <br>
