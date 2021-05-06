@@ -47,13 +47,22 @@
         $query = "INSERT INTO USERS (USERNAME, PASSWORD, FIRSTNAME, LASTNAME, EMAIL, STATE, CITY)
                     VALUES ('$username', '$password', '$firstname', '$lastname', '$email', '$city', '$state');";
 
-        setcookie('firstname', $firstname, time() + (10 * 365 * 24 * 60 * 60), '/');
-        setcookie('lastname', $lastname, time() + (10 * 365 * 24 * 60 * 60), '/');
-        setcookie('email', $email, time() + (10 * 365 * 24 * 60 * 60), '/');
-        setcookie('city', $city, time() + (10 * 365 * 24 * 60 * 60), '/');
-        setcookie('state', $state, time() + (10 * 365 * 24 * 60 * 60), '/');
-        
-        header("Location: ../pages/search.html");
+        $result = $mysqli->query($query);
+            
+        // Verify the result
+        if (!$result) {
+            die("Query failed: ($mysqli->error <br>");
+        } else {
+            echo "You are now registered";
+            
+            setcookie('firstname', $firstname, time() + (10 * 365 * 24 * 60 * 60), '/');
+            setcookie('lastname', $lastname, time() + (10 * 365 * 24 * 60 * 60), '/');
+            setcookie('email', $email, time() + (10 * 365 * 24 * 60 * 60), '/');
+            setcookie('city', $city, time() + (10 * 365 * 24 * 60 * 60), '/');
+            setcookie('state', $state, time() + (10 * 365 * 24 * 60 * 60), '/');
+            
+            header("Location: ../pages/search.html");
+        }
     }
 
 ?>
