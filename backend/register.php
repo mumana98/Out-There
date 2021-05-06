@@ -61,7 +61,7 @@
             setcookie('city', $city, time() + (10 * 365 * 24 * 60 * 60), '/');
             setcookie('state', $state, time() + (10 * 365 * 24 * 60 * 60), '/');
             echo "OK";
-            header("Location: ../pages/search.html");
+            //header("Location: ../pages/search.html");
         }
     }
 
