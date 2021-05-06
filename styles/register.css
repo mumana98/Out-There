@@ -101,7 +101,7 @@ a{
   border-radius: 10px;
 }
 
-.form-body input[type=password]{
+.form-body input[type=password], #username{
   width: 70%;
   padding:15px;
   margin: 8px 0 22px 0;
@@ -111,7 +111,7 @@ a{
   border-radius: 10px;
 }
 
-.form-body input[type=text]:focus, input[type=password]:focus {
+.form-body input[type=text]:focus, input[type=password]:focus, #username:focus{
   background-color: #ddd;
   outline: none;
   border: 2px solid #4CAF50;
