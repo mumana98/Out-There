@@ -28,12 +28,6 @@
     $city = $_GET["city"];
     $state = $_GET["state"];
 
-    setcookie('firstname', $firstname, time() + (10 * 365 * 24 * 60 * 60), '/');
-    setcookie('lastname', $lastname, time() + (10 * 365 * 24 * 60 * 60), '/');
-    setcookie('email', $email, time() + (10 * 365 * 24 * 60 * 60), '/');
-    setcookie('city', $city, time() + (10 * 365 * 24 * 60 * 60), '/');
-    setcookie('state', $state, time() + (10 * 365 * 24 * 60 * 60), '/');
-
     $username = $mysqli->real_escape_string($username);
     $password = $mysqli->real_escape_string($password);
     $firstname = $mysqli->real_escape_string($firstname);
@@ -52,6 +46,13 @@
         //insert user
         $query = "INSERT INTO USERS (USERNAME, PASSWORD, FIRSTNAME, LASTNAME, EMAIL, STATE, CITY)
                     VALUES ('$username', '$password', '$firstname', '$lastname', '$email', '$city', '$state');";
+
+        setcookie('firstname', $firstname, time() + (10 * 365 * 24 * 60 * 60), '/');
+        setcookie('lastname', $lastname, time() + (10 * 365 * 24 * 60 * 60), '/');
+        setcookie('email', $email, time() + (10 * 365 * 24 * 60 * 60), '/');
+        setcookie('city', $city, time() + (10 * 365 * 24 * 60 * 60), '/');
+        setcookie('state', $state, time() + (10 * 365 * 24 * 60 * 60), '/');
+        
         header("Location: ../pages/search.html");
     }
 
