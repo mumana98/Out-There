@@ -6,7 +6,7 @@ $(document).on("keypress", function(e){
         $(input).click();
     }
     else {
-        return false;
+        return true;
     }
 })
 
