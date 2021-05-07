@@ -7,6 +7,8 @@ function ajaxFunction() {
 
     ajaxRequest = new XMLHttpRequest();
 
+    console.log("login check ajax ran")
+
     ajaxRequest.onreadystatechange = function () {
         if (ajaxRequest.readyState == 4) {
             if(ajaxRequest.responseText == "LOGGED IN"){
@@ -16,6 +18,6 @@ function ajaxFunction() {
         }
     }
 
-    ajaxRequest.open("POST", "../backend/checkLogin.php", true);
+    ajaxRequest.open("GET", "../backend/checkLogin.php", true);
     ajaxRequest.send(null);
 }
