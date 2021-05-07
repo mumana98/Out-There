@@ -10,14 +10,12 @@ $(document).on("keypress", function(e){
     }
 })
 
-$('a').on('click', function (e) {
+$('.save').on('click', function (e) {
     e.preventDefault();
     console.log("clicked")
-    if($( this ).hasClass( "save" )){
-        var classList = this.className.split(' ')
-        var c = classList[2]
-        console.log(c)
-    }
+    var classList = this.className.split(' ')
+    var c = classList[2]
+    console.log(c)
 });
   
 
