@@ -10,16 +10,18 @@ $(document).on("keypress", function(e){
     }
 })
 
-$( "a" ).click(function(e) {
-    console.log("clicked")
-    e.preventDefault();
-    if($( this ).hasClass( "save" )){
-        var classList = this.className.split(' ')
-        var c = classList[2]
-        console.log(c)
-    }
-    
+$(document).ready(function(){
+    $('a').live('click', function(e){
+        console.log("clicked")
+        e.preventDefault();
+        if($( this ).hasClass( "save" )){
+            var classList = this.className.split(' ')
+            var c = classList[2]
+            console.log(c)
+        }
+    });
 });
+
   
 
 function getData() {
