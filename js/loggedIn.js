@@ -6,8 +6,8 @@ function ajaxFunction() {
     var ajaxRequest;
 
     ajaxRequest = new XMLHttpRequest();
-
-    console.log("login check ajax ran")
+    var path = window.location.pathname;
+    console.log(path)
 
     ajaxRequest.onreadystatechange = function () {
         if (ajaxRequest.readyState == 4) {
