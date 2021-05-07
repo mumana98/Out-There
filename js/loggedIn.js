@@ -17,7 +17,9 @@ function ajaxFunction() {
             }
         }
     }
+    var loginCheck = document.getElementById('login').value;
+    var queryString = "?loginCheck=" + loginCheck;
 
-    ajaxRequest.open("GET", "../backend/checkLogin.php", true);
+    ajaxRequest.open("GET", "../backend/checkLogin.php" + queryString, true);
     ajaxRequest.send(null);
 }
