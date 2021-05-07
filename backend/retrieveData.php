@@ -46,22 +46,22 @@
         while ($row = $result->fetch_row()) {
 
             echo "<div class='center-content-card'>
-                    <h2>$row[1]</h2>
+                    <h2 class='id_$row[0]'>$row[1]</h2>
                     <table style='text-align: left;'>
                     <tr>
-                        <td><strong>Organization:</strong> $row[2]</td>
+                        <td><strong>Organization:</strong> <p class='id_$row[0]'>$row[2]</p></td>
                         <td class='spacer'></td>
-                        <td><strong>Location:</strong> $row[3]</td>
+                        <td><strong>Location:</strong> <p class='id_$row[0]'>$row[3]</p></td>
                     </tr>
                     <tr>
-                        <td><strong>In-Person:</strong> $row[4]</td>
+                        <td><strong>In-Person:</strong> <p class='id_$row[0]'>$row[4]</p></td>
                         <td class='spacer'></td>
-                        <td><strong>Date:</strong> $row[6]</td>
+                        <td><strong>Date:</strong> <p class='id_$row[0]'>$row[6]</p></td>
                     </tr>
                     </table>
                     <div class='hr'></div>
-                    <p class='description'>$row[5]</p>
-                    <a href='$row[7]' class='button'>Volunteer Here</a>
+                    <p class='description'><p class='id_$row[0]'>$row[5]</p></p>
+                    <a href='$row[7]' class='button id_$row[0]'>Volunteer Here</a>
                     <a href='' class='button'>Save</a>
                 </div>";
 
