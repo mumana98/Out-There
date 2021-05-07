@@ -29,6 +29,12 @@ function putData(data) {
 
     ajaxRequest = new XMLHttpRequest();
 
+    ajaxRequest.onreadystatechange = function () {
+        if (ajaxRequest.readyState == 4) {
+            alert("Opportunity saved!");
+        }
+    }
+
     var queryString = "?Title=" + data[0];
     queryString +=  "&Organization=" + data[1] + "&Location=" + data[2] + "&InPerson=" + data[3] + "&Date=" + data[4] + "&Description=" + data[5];
 
