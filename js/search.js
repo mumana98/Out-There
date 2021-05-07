@@ -11,6 +11,7 @@ $(document).on("keypress", function(e){
 })
 
 $( "a" ).click(function(e) {
+    console.log("clicked")
     e.preventDefault();
     if($( this ).hasClass( "save" )){
         var classList = this.className.split(' ')
