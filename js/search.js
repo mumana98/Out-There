@@ -10,6 +10,16 @@ $(document).on("keypress", function(e){
     }
 })
 
+$( "a" ).click(function() {
+    if($( this ).hasClass( "save" )){
+        var classList = this.className.split(' ')
+        var c = classList[2]
+        console.log(c)
+    }
+    
+});
+  
+
 function getData() {
     var ajaxRequest;  // The variable that makes Ajax possible!
 
