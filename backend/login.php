@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     error_reporting(E_ALL);
     ini_set("display_errors", "on");
     
@@ -32,13 +34,14 @@
         echo "<p style='color:#f00'>Username or password was incorrect</p>";
     } 
     else{
-        while ($row = $result->fetch_row()) {
+        session_start();
+        while ($row = $result->fetch_row()) { //should only be one row
             setcookie('firstname', $row[3], time() + (10 * 365 * 24 * 60 * 60), '/');
             setcookie('lastname', $row[4], time() + (10 * 365 * 24 * 60 * 60), '/');
             setcookie('email', $row[5], time() + (10 * 365 * 24 * 60 * 60), '/');
             setcookie('state', $row[6], time() + (10 * 365 * 24 * 60 * 60), '/');
             setcookie('city', $row[7], time() + (10 * 365 * 24 * 60 * 60), '/');
-            
+            $_SESSION["loggedIn"] = true;
             echo "OK";
         }
     }
