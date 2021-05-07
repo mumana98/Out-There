@@ -1,6 +1,6 @@
 var input = document.getElementById("myInput");
 
-$(document).on("keypress", "input", function(e){
+$(document).on("keypress", function(e){
     e.preventDefault();
     if(e.which == 13){
         $(input).click();
