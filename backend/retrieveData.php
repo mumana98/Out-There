@@ -62,6 +62,7 @@
                     <div class='hr'></div>
                     <p class='description'>$row[5]</p>
                     <a href='$row[7]' class='button'>Volunteer Here</a>
+                    <a href='' class='button'>Save</a>
                 </div>";
 
         }
