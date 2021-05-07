@@ -1,3 +1,7 @@
+$( document ).ready(function() {
+    ObtainUserInfo()
+})
+
 function ObtainUserInfo(){
     var ajaxRequest;
 
