@@ -14,7 +14,7 @@ function ajaxFunction() {
         if (ajaxRequest.readyState == 4) {
             if(ajaxRequest.responseText == "LOGGED IN"){
                 $("#login").html("")
-                $("#login").addClass("fas fa-user-circle")
+                $("#login").addClass("far fa-user-circle")
             }
         }
     }
