@@ -6,9 +6,8 @@ $(document).on("keypress", function(e){
         $(input).click();
     }
     else {
-        return true;
+        return false;
     }
-    return false;   
 })
 
 function getData() {
