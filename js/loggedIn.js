@@ -32,22 +32,3 @@ function ajaxFunction() {
     }
 
 }
-
-// function getData() {
-//     var ajaxRequest;
-
-//     ajaxRequest = new XMLHttpRequest();
-
-//     ajaxRequest.onreadystatechange = function () {
-//       if (ajaxRequest.readyState == 4) {
-//         var ajaxDisplay = document.getElementById('ajaxDiv');
-//         ajaxDisplay.innerHTML = ajaxRequest.responseText;
-//       }
-//     }
-
-//     var searchTerm = document.getElementById('searchTerm').value;
-//     var queryString = "?searchTerm=" + searchTerm;
-
-//     ajaxRequest.open("POST", "../backend/retrieveData.php" + queryString, true);
-//     ajaxRequest.send(null);
-// }
