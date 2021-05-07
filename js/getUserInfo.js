@@ -12,6 +12,7 @@ function ObtainUserInfo(){
     ajaxRequest.onreadystatechange = function () {
         if (ajaxRequest.readyState == 4) {
             userInfo = ajaxRequest.responseText;
+            userInfo = userInfo.split(" ");
             console.log(userInfo)
         }
     }
