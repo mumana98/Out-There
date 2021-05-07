@@ -1,5 +1,4 @@
 <?php
-    session_start();
 
     error_reporting(E_ALL);
     ini_set("display_errors", "on");
@@ -34,6 +33,7 @@
         echo "<p style='color:#f00'>Username or password was incorrect</p>";
     } 
     else{
+        session_start();
         while ($row = $result->fetch_row()) { //should only be one row
             setcookie('firstname', $row[3], time() + (10 * 365 * 24 * 60 * 60), '/');
             setcookie('lastname', $row[4], time() + (10 * 365 * 24 * 60 * 60), '/');
