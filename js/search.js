@@ -5,6 +5,10 @@ $(document).on("keypress", function(e){
     if(e.which == 13){
         $(input).click();
     }
+    else {
+        return true;
+    }
+    return false;   
 })
 
 function getData() {
