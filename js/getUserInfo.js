@@ -12,7 +12,7 @@ function ObtainUserInfo(){
     ajaxRequest.onreadystatechange = function () {
         if (ajaxRequest.readyState == 4) {
             userInfo = ajaxRequest.responseText;
-            userInfo = userInfo.split(" ");
+            userInfo = userInfo.split(":");
             $("#name").html(userInfo[0] + " " + userInfo[1])
             $("#email").html(userInfo[2])
             $("#city").html(userInfo[3])
