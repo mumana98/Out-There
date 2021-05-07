@@ -17,6 +17,12 @@ function ajaxFunction() {
             if(ajaxRequest.responseText == "LOGGED IN"){
                 $("#login").html("")
                 $("#login").addClass("far fa-user-circle fa-lg")
+                if(page == "index.html"){
+                    $("#login").attr("href", "./pages/profile.html")
+                }
+                else{
+                    $("#login").attr("href", "./profile.html")
+                }
             }
         }
     }
