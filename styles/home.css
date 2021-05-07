@@ -45,8 +45,17 @@ html {
     right: 50px;
     top: 50%;
     transform: translateY(-50%);
-    margin-bottom: 10px;
 }
+
+#login:after {
+    margin-top: 10px;
+    display:block;
+    content: '';
+    border-bottom: solid 3px #fff;  
+    transform: scaleX(0);  
+    transition: transform 150ms ease-in-out;
+}
+
 
 #nav-logo{
     position: absolute;
