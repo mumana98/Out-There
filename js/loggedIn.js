@@ -7,7 +7,8 @@ function ajaxFunction() {
 
     ajaxRequest = new XMLHttpRequest();
     var path = window.location.pathname;
-    console.log(path)
+    var page = path.split("/").pop();
+    console.log(page)
 
     ajaxRequest.onreadystatechange = function () {
         if (ajaxRequest.readyState == 4) {
@@ -17,9 +18,15 @@ function ajaxFunction() {
             }
         }
     }
-    var loginCheck = document.getElementById('login').value;
-    var queryString = "?loginCheck=" + loginCheck;
+    // var loginCheck = document.getElementById('login').value;
+    // var queryString = "?loginCheck=" + loginCheck;
+    if(page == "index.html"){
+        ajaxRequest.open("GET", "./backend/checkLogin.php", true);
+        ajaxRequest.send(null);
+    }
+    else{
+        ajaxRequest.open("GET", "../backend/checkLogin.php", true);
+        ajaxRequest.send(null);
+    }
 
-    ajaxRequest.open("GET", "../backend/checkLogin.php" + queryString, true);
-    ajaxRequest.send(null);
 }
