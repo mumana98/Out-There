@@ -1,9 +1,8 @@
 var input = document.getElementById("myInput");
 
-input.addEventListener("keyup", function (event) {
-    if (event.key == "Enter") {
-        event.preventDefault();
-        document.getElementById("myBtn").click();
+$(document).on("keypress", "input", function(e){
+    if(e.which == 13){
+        $(input).click();
     }
 })
 
