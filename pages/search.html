@@ -8,13 +8,22 @@
   <meta name="description" content="Search Page of the Out There Site" />
   <link rel="stylesheet" href="../styles/search.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
   <script src="../js/loggedIn.js"></script>
 </head>
 
 <body>
   <script language="javascript" type="text/javascript">
+    var input = document.getElementById("myInput");
+
+    input.addEventListener("keyup", function (event) {
+      if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("myBtn").click();
+      }
+    })
 
     function getData() {
       var ajaxRequest;  // The variable that makes Ajax possible!
@@ -56,7 +65,7 @@
       <h1 style=font-size:38px>Search For Opportunities</h1>
       <form class="searchBar" method="GET" name="submit">
         <input type="text" placeholder="Search..." name="searchTerm" id="searchTerm" />
-        <button type="button" onclick="getData()"><i class="fa fa-search"></i></button>
+        <button id="myInput" type="button" onclick="getData()"><i class="fa fa-search"></i></button>
       </form>
       <div id='ajaxDiv'></div>
     </div>
