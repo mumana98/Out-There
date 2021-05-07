@@ -21,7 +21,20 @@ $(document).on('click', '.save', function (e) {
         dataObj[idx] = $( this ).text()
     })
     console.log(dataObj)
+    putData(dataObj)
 });
+
+function putData(data) {
+    var ajaxRequest; 
+
+    ajaxRequest = new XMLHttpRequest();
+
+    var queryString = "?Title=" + data[0];
+    queryString +=  "&Organization=" + data[1] + "&Location=" + data[2] + "&InPerson=" + data[3] + "&Date=" + data[4] + "&Description=" + data[5];
+
+    ajaxRequest.open("POST", "../backend/opportunity.php" + queryString, true);
+    ajaxRequest.send(null);
+}
   
 
 function getData() {
