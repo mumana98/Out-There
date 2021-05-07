@@ -47,16 +47,6 @@ html {
     transform: translateY(-50%);
 }
 
-#login:after {
-    margin-top: 10px;
-    display:block;
-    content: '';
-    border-bottom: solid 3px #fff;  
-    transform: scaleX(0);  
-    transition: transform 150ms ease-in-out;
-}
-
-
 #nav-logo{
     position: absolute;
     height: 120%;
