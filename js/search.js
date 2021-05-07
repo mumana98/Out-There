@@ -10,7 +10,8 @@ $(document).on("keypress", function(e){
     }
 })
 
-$( "a" ).click(function() {
+$( "a" ).click(function(e) {
+    e.preventDefault();
     if($( this ).hasClass( "save" )){
         var classList = this.className.split(' ')
         var c = classList[2]
