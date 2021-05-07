@@ -10,13 +10,15 @@ $(document).on("keypress", function(e){
     }
 })
 
-$('.save').on('click', function (e) {
-    e.preventDefault();
-    console.log("clicked")
-    var classList = this.className.split(' ')
-    var c = classList[2]
-    console.log(c)
-});
+$(document).ready(function(){
+    $('.save').on('click', function (e) {
+        e.preventDefault();
+        console.log("clicked")
+        var classList = this.className.split(' ')
+        var c = classList[2]
+        console.log(c)
+    })
+})
   
 
 function getData() {
