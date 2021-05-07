@@ -41,6 +41,7 @@
             setcookie('state', $row[6], time() + (10 * 365 * 24 * 60 * 60), '/');
             setcookie('city', $row[7], time() + (10 * 365 * 24 * 60 * 60), '/');
             $_SESSION["loggedIn"] = true;
+            setcookie('loggedInCookie', $_SESSION["loggedIn"], time() + (10 * 365 * 24 * 60 * 60), '/');
             echo "OK";
         }
     }
