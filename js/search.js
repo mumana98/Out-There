@@ -15,7 +15,7 @@ $(document).on('click', '.save', function (e) {
     e.preventDefault();
     var classList = this.className.split(' ')
     var c = classList[2]
-    var data = $("." + c)
+    var data = $("." + c).innerHTML
     console.log(data)
 });
   
