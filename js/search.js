@@ -13,10 +13,10 @@ $(document).on("keypress", function(e){
 
 $(document).on('click', '.save', function (e) {
     e.preventDefault();
-    console.log("clicked")
     var classList = this.className.split(' ')
     var c = classList[2]
-    console.log(c)
+    var data = $("." + c)
+    console.log(data)
 });
   
 
