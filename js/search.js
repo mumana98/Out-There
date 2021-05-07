@@ -15,8 +15,12 @@ $(document).on('click', '.save', function (e) {
     e.preventDefault();
     var classList = this.className.split(' ')
     var c = classList[2]
-    var data = $("." + c).innerHTML
-    console.log(data)
+    var data = $("." + c)
+    var dataObj = {}
+    data.each(function(idx){
+        dataObj[idx] = $( this ).text()
+    })
+    console.log(dataObj)
 });
   
 
