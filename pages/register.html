@@ -16,46 +16,6 @@
 </head>
 
 <body>
-    <!-- <script language="javascript" type="text/javascript">
-
-        function ajaxFunction() {
-            
-            var ajaxRequest;  // The variable that makes Ajax possible!
-
-            ajaxRequest = new XMLHttpRequest();
-
-            // Create a function that will receive data sent from the server and will update
-            // the div section in the same page.
-
-            ajaxRequest.onreadystatechange = function () {
-                if (ajaxRequest.readyState == 4) {
-                    if(ajaxRequest.responseText == "OK"){
-                        window.location.replace("./search.html");    
-                    }
-                    else{
-                        var ajaxDisplay = document.getElementById('ajaxDiv');
-                        ajaxDisplay.innerHTML = ajaxRequest.responseText;
-                    }
-                }
-            }
-
-            var username = document.getElementById('username').value;
-            var password = document.getElementById('password').value;
-            var firstname = document.getElementById('firstname').value;
-            var lastname = document.getElementById('lastname').value;
-            var email = document.getElementById('email').value;
-            var city = document.getElementById('city').value;
-            var state = document.getElementById('state').value;
-
-            var queryString = "?username=" + username;
-
-            queryString +=  "&password=" + password + "&firstname=" + firstname + "&lastname=" + lastname + "&email=" + email + "&city=" + city + "&state=" + state;
-
-            ajaxRequest.open("POST", "../backend/register.php" + queryString, true);
-            ajaxRequest.send(null);
-        }
-
-    </script> -->
     <nav class="container-navbar">
         <div class="navbar">
             <a href="../index.html"><img id="nav-logo" src="../pictures/white_out-there_img.png" alt="logo image" /></a>
@@ -113,7 +73,7 @@
                     <br>
                     <input type="text" id="city" name="city" required><br><br>
 
-                    <input id="submit" type="button" name="Submit" value="Submit" onclick="ajaxFunction()"/>
+                    <input id="submit" type="submit" name="Submit" value="Submit" />
                     <div id='ajaxDiv'></div>
                     <br>
                     <a href="./login.html">Login</a>
