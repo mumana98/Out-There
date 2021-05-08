@@ -27,35 +27,35 @@ function validate(){
     var firstLetter = username.charAt(0);
 
     if(username.length < 6 || username.length > 10){
-        window.alert("Username and password must contain: 6-10 characters, at least 1 capital letter, at least 1 lowercase letter, and at least 1 digit.")
+        window.alert("Username and password must contain: 6-10 characters, at least 1 capital letter, at least 1 lowercase letter, at least 1 digit, and the first character must be a letter.")
         return
     }
     else if(!alphanumeric(username)){
-        window.alert("Invalid username or password")
+        window.alert("Username and password must contain: 6-10 characters, at least 1 capital letter, at least 1 lowercase letter, at least 1 digit, and the first character must be a letter.")
         return 
     }
     else if(!isNaN(firstLetter)){
-        window.alert("Invalid username or password")
+        window.alert("Username and password must contain: 6-10 characters, at least 1 capital letter, at least 1 lowercase letter, at least 1 digit, and the first character must be a letter.")
         return 
     }
     else if(pw.length < 6 || pw.length > 10){
-        window.alert("Invalid username or password")
+        window.alert("Username and password must contain: 6-10 characters, at least 1 capital letter, at least 1 lowercase letter, at least 1 digit, and the first character must be a letter.")
         return
     }
     else if(!alphanumeric(pw)){
-        window.alert("Invalid username or password")
+        window.alert("Username and password must contain: 6-10 characters, at least 1 capital letter, at least 1 lowercase letter, at least 1 digit, and the first character must be a letter.")
         return 
     }
     else if(!hasLowerCase(pw)){
-        window.alert("Invalid username or password")
+        window.alert("Username and password must contain: 6-10 characters, at least 1 capital letter, at least 1 lowercase letter, at least 1 digit, and the first character must be a letter.")
         return 
     }
     else if(!hasUpperCase(pw)){
-        window.alert("Invalid username or password")
+        window.alert("Username and password must contain: 6-10 characters, at least 1 capital letter, at least 1 lowercase letter, at least 1 digit, and the first character must be a letter.")
         return 
     }
     else if(!hasDigit(pw)){
-        window.alert("Invalid username or password")
+        window.alert("Username and password must contain: 6-10 characters, at least 1 capital letter, at least 1 lowercase letter, at least 1 digit, and the first character must be a letter.")
         return 
     }
     else{
