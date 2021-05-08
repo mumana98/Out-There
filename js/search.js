@@ -32,6 +32,7 @@ function putData(data) {
     ajaxRequest.onreadystatechange = function () {
         if (ajaxRequest.readyState == 4) {
             alert("Opportunity saved!");
+            console.log(ajaxRequest.responseText);
         }
     }
 
