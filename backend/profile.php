@@ -30,7 +30,8 @@
                     </tr>
                     </table>
                     <div class='hr'></div>
-                    <a href='' class='button'>Volunteer Here</a>
+                    <p>$op[5]</p>
+                    <a href='$op[4]' class='button'>Volunteer Here</a>
                 </div>";
         }
     }else{

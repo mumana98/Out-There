@@ -2,7 +2,7 @@
     error_reporting(E_ALL);
     ini_set("display_errors", "on");
     session_start();
-    $opportunity = array($_GET["Title"],$_GET["Organization"],$_GET["Location"], $_GET["InPerson"],$_GET["Date"]);
+    $opportunity = array($_GET["Title"],$_GET["Organization"],$_GET["Location"], $_GET["InPerson"],$_GET["Date"],$_GET["Description"], $_GET["Link"]);
 
     if(!isset($_COOKIE['Opportunities'])) { //cookie doesnt exist
         $opportunities = array(); //make array
