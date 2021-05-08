@@ -3,6 +3,7 @@
     ini_set("display_errors", "on");
     session_start();
     $data = unserialize($_COOKIE['Opportunities'], ["allowed_classes" => false]);
+    echo $data;
     foreach($data as $op) {
         echo "<div class='center-content-card'>
                 <h2>$op[0]</h2>
