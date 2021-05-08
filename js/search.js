@@ -39,7 +39,7 @@ function putData(data) {
     var queryString = "?Title=" + data[0];
     queryString +=  "&Organization=" + data[1] + "&Location=" + data[2] + "&InPerson=" + data[3] + "&Date=" + data[4] + "&Description=" + data[5];
 
-    ajaxRequest.open("POST", "../backend/opportunity.php" + queryString, true);
+    ajaxRequest.open("GET", "../backend/opportunity.php" + queryString, true);
     ajaxRequest.send(null);
 }
   
