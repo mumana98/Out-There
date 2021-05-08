@@ -1,5 +1,5 @@
 <?php
-    $opportunity = array($_GET["Title"],$_GET["Organization"],$_GET["Location"], $_GET["InPerson"],$_GET["Date"],$_GET["Description"]);
+    $opportunity = array($_GET["Title"],$_GET["Organization"],$_GET["Location"], $_GET["InPerson"],$_GET["Date"]);
 
     if(!isset($_COOKIE['Opportunities'])) { //cookie doesnt exist
         $opportunities = array(); //make array
