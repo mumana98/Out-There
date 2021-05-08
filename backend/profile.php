@@ -2,8 +2,8 @@
     error_reporting(E_ALL);
     ini_set("display_errors", "on");
     session_start();
-    $data = unserialize($_COOKIE['Opportunities']);
-    $serialized = 'a:10:{s:7:"contact";s:1:"1";s:19:"profile_affiliation";s:23:"University, Inc.";s:18:"profile_first_name";s:3:"Ben";s:22:"profile_street_address";s:19:"8718 Tot Ave. S.";s:12:"profile_city";s:6:"Mobile";s:13:"profile_state";s:2:"AL";s:15:"profile_country";s:3:"USA";s:15:"profile_zipcode";s:5:"36695";s:18:"profile_home_phone";s:10:"2599494420";s:17:"profile_last_name";s:6:"Powers";}';
+    //$data = unserialize($_COOKIE['Opportunities']);
+    $serialized = $_COOKIE['Opportunities'];
 
     $fixed = preg_replace_callback(
         '/s:([0-9]+):"(.*?)";/',
