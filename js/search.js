@@ -78,7 +78,7 @@ function checkLogin() {
     ajaxRequest.onreadystatechange = function () {
         if (ajaxRequest.readyState == 4) {
             if(ajaxRequest.responseText != "LOGGED IN"){
-                header("Location: ../pages/login.html");
+                window.location.replace("https://spring-2021.cs.utexas.edu/cs329e-bulko/umana/Out-There_Final/Out-There/pages/login.html");
             }
         }
     }
