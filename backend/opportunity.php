@@ -6,14 +6,14 @@
         array_push($opportunities,$opportunity); //push array into array
         setcookie('Opportunities', $opportunities, time() + (10 * 365 * 24 * 60 * 60), '/');
 
-        echo "opportunity saved";
+        echo "opportunity created";
     }
     else{
         $opportunities = $_COOKIE['Opportunities']; //get already existing cookie
         array_push($opportunities,$opportunity); //push array to already existing cookie
         setcookie('Opportunities', $opportunities, time() + (10 * 365 * 24 * 60 * 60), '/');
 
-        echo "opportunity saved";
+        echo "opportunity added";
     }
 
 ?>
