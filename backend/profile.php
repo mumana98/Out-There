@@ -3,8 +3,10 @@
     ini_set("display_errors", "on");
     session_start();
     //$data = unserialize($_COOKIE['Opportunities']);
-    $data = unserialize($_COOKIE['Opportunities']);
-
+    $data = "";
+    if(isset($_COOKIE['Opportunities'])){
+        $data = unserialize($_COOKIE['Opportunities']);
+    }
     // $fixed = preg_replace_callback(
     //     '/s:([0-9]+):"(.*?)";/',
     //     function ($matches) { return "s:".strlen($matches[2]).':"'.$matches[2].'";';     },
