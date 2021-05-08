@@ -29,9 +29,6 @@
                         <td><strong>Date:</strong> $op[4]</td>
                     </tr>
                     </table>
-                    <div class='hr'></div>
-                    <p>$op[5]</p>
-                    <a href='$op[4]' class='button'>Volunteer Here</a>
                 </div>";
         }
     }else{
