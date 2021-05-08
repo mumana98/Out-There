@@ -1,4 +1,6 @@
 <?php
+    error_reporting(E_ALL);
+    ini_set("display_errors", "on");
     start_session();
     $opportunity = array($_GET["Title"],$_GET["Organization"],$_GET["Location"], $_GET["InPerson"],$_GET["Date"]);
 
