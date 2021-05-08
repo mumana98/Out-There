@@ -6,7 +6,9 @@
         array_push($opportunities,$opportunity); //push array into array
         setcookie('Opportunities', $opportunities, time() + (10 * 365 * 24 * 60 * 60), '/');
         foreach ($opportunities as $value) {
-            echo $value;
+            foreach($value as $a){
+                echo $a;
+            }
         }
         echo "opportunity created";
     }
