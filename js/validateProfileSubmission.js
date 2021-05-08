@@ -26,11 +26,7 @@ function validate(){
 
     var firstLetter = username.charAt(0);
 
-    if(!username || !pw || !rpw){
-        window.alert("Invalid username or password")
-        return
-    }
-    else if(username.length < 6 || username.length > 10){
+    if(username.length < 6 || username.length > 10){
         window.alert("Invalid username or password")
         return
     }
