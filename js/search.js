@@ -1,5 +1,9 @@
 var input = document.getElementById("myInput");
 
+$( document ).ready(function() {
+    checkLogin()
+})
+
 $(document).on("keypress", function(e){
     if(e.which == 13){
         e.preventDefault();
@@ -64,4 +68,23 @@ function getData() {
 
     ajaxRequest.open("POST", "../backend/retrieveData.php" + queryString, true);
     ajaxRequest.send(null);
+}
+
+function checkLogin() {
+    var ajaxRequest;
+
+    ajaxRequest = new XMLHttpRequest();
+
+    ajaxRequest.onreadystatechange = function () {
+        if (ajaxRequest.readyState == 4) {
+            if(ajaxRequest.responseText != "LOGGED IN"){
+                header("Location: ../pages/login.html");
+            }
+        }
+    }
+
+    ajaxRequest.open("GET", "../backend/checkLogin.php", true);
+    ajaxRequest.send(null);
+    
+
 }
