@@ -69,7 +69,7 @@ function getData() {
     ajaxRequest.open("POST", "../backend/retrieveData.php" + queryString, true);
     ajaxRequest.send(null);
 }
-
+ 
 function checkLogin() {
     var ajaxRequest;
 
