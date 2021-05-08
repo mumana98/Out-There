@@ -1,6 +1,6 @@
 #profile-card {
     margin: 30px auto;
-    height: 90vh;
+    height: max-content;
     width: 60vw;
     border: 2px solid #4caf50;
     border-radius: 10px;
