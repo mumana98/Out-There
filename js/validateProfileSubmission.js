@@ -38,10 +38,6 @@ function validate(){
         window.alert("Invalid username or password")
         return 
     }
-    else if(pw !== rpw){
-        window.alert("Invalid username or password")
-        return 
-    }
     else if(pw.length < 6 || pw.length > 10){
         window.alert("Invalid username or password")
         return
