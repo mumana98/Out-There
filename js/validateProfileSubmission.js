@@ -59,7 +59,6 @@ function validate(){
         return 
     }
     else{
-        window.alert("User Validated!")
         ajaxFunction()
         return 
     }
