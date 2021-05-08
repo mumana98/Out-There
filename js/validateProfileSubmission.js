@@ -27,7 +27,7 @@ function validate(){
     var firstLetter = username.charAt(0);
 
     if(username.length < 6 || username.length > 10){
-        window.alert("Invalid username or password")
+        window.alert("Username and password must contain: 6-10 characters, at least 1 capital letter, at least 1 lowercase letter, and at least 1 digit.")
         return
     }
     else if(!alphanumeric(username)){
