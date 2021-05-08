@@ -13,7 +13,7 @@
     // $original_array=unserialize($fixed);
 
     // echo $original_array;   
-    if(count($data) > 0){
+    if($data != ""){
         foreach($data as $op) {
             echo "<div class='center-content-card'>
                     <h2>$op[0]</h2>
