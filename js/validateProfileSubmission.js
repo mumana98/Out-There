@@ -1,8 +1,10 @@
-var form_el = document.getElementById("form")
+$( document ).ready(function() {
+    var form_el = document.getElementById("form")
 
-form_el.addEventListener("submit", function(evt) {
-    evt.preventDefault()
-    validate()
+    form_el.addEventListener("submit", function(evt) {
+        evt.preventDefault()
+        validate()
+    })
 })
 
 function validate(){
